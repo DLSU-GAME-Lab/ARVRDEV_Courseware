@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Vuforia;
 
 /// <summary>
 /// Stops the positional device tracker to make physics work effectively.
