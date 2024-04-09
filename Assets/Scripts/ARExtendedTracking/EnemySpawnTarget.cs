@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Vuforia;
 
-public class EnemySpawnTarget : ImageTargetBehaviour, ITrackableEventHandler {
+public class EnemySpawnTarget : ImageTargetBehaviour {
 
     private EnemySpawnManager spawnManager;
     private bool activated = false;
@@ -13,11 +13,11 @@ public class EnemySpawnTarget : ImageTargetBehaviour, ITrackableEventHandler {
         this.spawnManager = this.transform.Find("Container").GetComponent<EnemySpawnManager>();
         this.spawnManager.gameObject.SetActive(false);
 
-        this.RegisterTrackableEventHandler(this);
+        this.OnTargetStatusChanged += this.OnTrackableStateChanged;
 	}
 
     private void OnDestroy() {
-        this.UnregisterTrackableEventHandler(this);
+        this.OnTargetStatusChanged -= this.OnTrackableStateChanged;
     }
 
     // Update is called once per frame
@@ -25,12 +25,12 @@ public class EnemySpawnTarget : ImageTargetBehaviour, ITrackableEventHandler {
 		
 	}
 
-    public void OnTrackableStateChanged(Status previousStatus, Status newStatus) {
-        if (newStatus == Status.TRACKED && !this.activated) {
+    public void OnTrackableStateChanged(ObserverBehaviour behavior, TargetStatus newStatus) {
+        if (newStatus.Status == Status.TRACKED && !this.activated) {
             this.spawnManager.gameObject.SetActive(true);
             this.activated = true;
         }
-        else if (newStatus == Status.NO_POSE && this.activated) {
+        else if (newStatus.Status == Status.NO_POSE && this.activated) {
             this.spawnManager.gameObject.SetActive(false);
             this.activated = false;
         }

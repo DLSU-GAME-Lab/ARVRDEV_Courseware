@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using Vuforia;
 
-public class VideoTargetRef : ImageTargetBehaviour, ITrackableEventHandler {
+public class VideoTargetRef : ImageTargetBehaviour {
 
     // Use this for initialization
     void Start () {
-        this.RegisterTrackableEventHandler(this);
+        this.OnTargetStatusChanged -= this.OnTrackableStateChanged;
 	}
 
     private void OnDestroy() {
-        this.UnregisterTrackableEventHandler(this);
+        this.OnTargetStatusChanged -= this.OnTrackableStateChanged;
     }
 
     // Update is called once per frame
@@ -19,8 +19,8 @@ public class VideoTargetRef : ImageTargetBehaviour, ITrackableEventHandler {
 		
 	}
 
-    public void OnTrackableStateChanged(Status previousStatus, Status newStatus) {
-        if (newStatus == Status.TRACKED) {
+    public void OnTrackableStateChanged(ObserverBehaviour behavior, TargetStatus newStatus) {
+        if (newStatus.Status == Status.TRACKED) {
             VideoSizeComputer.Instance.OnDetected(this);
         }
     }
