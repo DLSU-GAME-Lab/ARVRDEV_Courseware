@@ -13,7 +13,7 @@ public class MainMenuScreen : View {
 	}
 
 	public void OnPhysicsARClicked() {
-		LoadManager.Instance.LoadScene (SceneNames.AR_PHYSICS_SCENE);
+		// LoadManager.Instance.LoadScene (SceneNames.AR_PHYSICS_SCENE);
 	}
 
 	public void OnExtendedTrackingClicked() {
@@ -61,7 +61,7 @@ public class MainMenuScreen : View {
     }
 
     public void OnSogangButtonClicked() {
-        LoadManager.Instance.LoadScene(SceneNames.AR_SOGANG_SCENE);
+        LoadManager.Instance.LoadScene(SceneNames.AR_IMAGE_VIEWER_SCENE);
     }
 
 	public override void OnRootScreenBack ()

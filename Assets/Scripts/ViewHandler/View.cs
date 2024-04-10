@@ -5,7 +5,7 @@ using System.Linq;
 using UnityEngine.UI;
 
 /// <summary>
-/// Represents the basic user interface customized for BC. Heavily referenced from Dragon Cubes UI
+/// Represents the basic user interface. Heavily referenced from Dragon Cubes UI
 /// 
 /// By: NeilDG
 /// </summary>

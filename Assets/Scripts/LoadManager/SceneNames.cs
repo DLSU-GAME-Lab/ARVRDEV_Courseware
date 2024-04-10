@@ -20,6 +20,6 @@ public class SceneNames {
     public const string AR_WRECKING_BALL_SCENE = "ARWreckingBallScene";
     public const string AR_BOX_SCENE = "ARBoxScene";
     public const string AR_PHOTOREALISM_SCENE = "ARPhotoRealism";
-    public const string AR_SOGANG_SCENE = "ARSogangViewer";
+    public const string AR_IMAGE_VIEWER_SCENE = "ARImageViewer";
 
 }
