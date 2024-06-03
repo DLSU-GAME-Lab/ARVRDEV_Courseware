@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Vuforia;
 
 public class CameraSettingsScreen : View {
 
@@ -10,7 +11,7 @@ public class CameraSettingsScreen : View {
 
 	// Use this for initialization
 	void Start () {
-        //this.SetSliderValues();
+        // this.SetSliderValues();
     }
 	
 	// Update is called once per frame
