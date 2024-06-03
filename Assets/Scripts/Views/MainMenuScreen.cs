@@ -13,7 +13,7 @@ public class MainMenuScreen : View {
 	}
 
 	public void OnPhysicsARClicked() {
-		// LoadManager.Instance.LoadScene (SceneNames.AR_PHYSICS_SCENE);
+		LoadManager.Instance.LoadScene (SceneNames.AR_PHYSICS_SCENE);
 	}
 
 	public void OnExtendedTrackingClicked() {
