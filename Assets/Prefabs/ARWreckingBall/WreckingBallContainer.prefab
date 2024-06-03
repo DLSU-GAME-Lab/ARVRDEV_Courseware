@@ -652,7 +652,7 @@ SpringJoint:
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: -0.5700002, z: 0}
-  m_Spring: 250
+  m_Spring: 1000
   m_Damper: 0
   m_MinDistance: 0
   m_MaxDistance: 0
@@ -813,7 +813,7 @@ SpringJoint:
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: -1.1099997, z: 0}
-  m_Spring: 250
+  m_Spring: 1000
   m_Damper: 0
   m_MinDistance: 0
   m_MaxDistance: 0
@@ -976,7 +976,7 @@ SpringJoint:
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0, y: -0.73, z: 0}
-  m_Spring: 250
+  m_Spring: 1000
   m_Damper: 0
   m_MinDistance: 0
   m_MaxDistance: 0
@@ -1139,7 +1139,7 @@ SpringJoint:
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0.29999995, y: -10.02, z: 13.200001}
-  m_Spring: 250
+  m_Spring: 1000
   m_Damper: 0
   m_MinDistance: 0
   m_MaxDistance: 0
