@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/ARBoxScene.unity
     guid: 032296b97e0478849b3d22979dfaf778
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/ARExtendedTracking.unity
     guid: df41fd3d0e7f0d94783107d5e5e9d7a8
   - enabled: 0
