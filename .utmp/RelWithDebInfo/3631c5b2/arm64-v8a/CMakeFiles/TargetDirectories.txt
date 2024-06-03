@@ -1,5 +1,0 @@
-X:/GithubProjects/ARVRDEV_Courseware/.utmp/RelWithDebInfo/3631c5b2/arm64-v8a/CMakeFiles/edit_cache.dir
-X:/GithubProjects/ARVRDEV_Courseware/.utmp/RelWithDebInfo/3631c5b2/arm64-v8a/CMakeFiles/rebuild_cache.dir
-X:/GithubProjects/ARVRDEV_Courseware/.utmp/RelWithDebInfo/3631c5b2/arm64-v8a/GameActivity/CMakeFiles/game.dir
-X:/GithubProjects/ARVRDEV_Courseware/.utmp/RelWithDebInfo/3631c5b2/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
-X:/GithubProjects/ARVRDEV_Courseware/.utmp/RelWithDebInfo/3631c5b2/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir
