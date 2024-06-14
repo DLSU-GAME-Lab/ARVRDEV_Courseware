@@ -20,7 +20,7 @@ public class ObjectPlacerManager : MonoBehaviour {
 
 	[SerializeField] private GameObject[] placeableObjectsCopy;
 
-	private int currentID = 0;
+	private int currentID = -1;
 
 	void Awake() { 
 		sharedInstance = this;

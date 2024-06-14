@@ -51,5 +51,17 @@ public class ObjectPlaceScreen : MonoBehaviour {
 		EventBroadcaster.Instance.PostEvent (EventNames.ExtendTrackEvents.ON_DELETE_ALL);
 	}
 
+	public void OnPlaneFound()
+	{
+        InfoScreen infoScreen = (InfoScreen)ViewHandler.Instance.FindActiveView(ViewNames.INFO_SCREEN_NAME);
+        infoScreen.SetVisibility(false);
+        this.gameObject.SetActive(true);
+	}
+
+    public void OnPlaneLost()
+    {
+        this.gameObject.SetActive(false);
+    }
+
 
 }
