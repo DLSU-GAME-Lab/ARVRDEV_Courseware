@@ -25,6 +25,9 @@ public class WreckingBallTargetHandler : MonoBehaviour {
     void Update () {
 		
 	}
+    public void OnTargetFoundCaller() {
+        Invoke("OnTargetFound",0.2f);
+    }
 
     public void OnTargetFound()
     {
