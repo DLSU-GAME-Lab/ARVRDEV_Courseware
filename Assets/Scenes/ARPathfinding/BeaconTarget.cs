@@ -5,22 +5,15 @@ using System.Runtime.Remoting.Services;
 using UnityEngine;
 using Vuforia;
 
-public class BeaconTarget : MonoBehaviour//, ItrackableEventHandler
+public class BeaconTarget : MonoBehaviour
 {
     public const string BEACON_POSITION_KEY = "BEACON_POSITION_KEY";
-    //[SerializeField]
-    //private PlatformTarget platformtarget;
+
     [SerializeField]
     private Camera arCamera;
-    //private TrackableBehaviour mTrackableBehavior;
-    // Start is called before the first frame update
+
     void Start()
     {
-        /*mTrackableBehavior = GetComponent<TrackableBehaviour>();
-        if (mTrackableBehavior)
-        {
-            mTrackableBehavior.RegisterTrackableEventHandler(this);
-        }*/
         EventBroadcaster.Instance.AddObserver(EventNames.ARPathFindEvents.ON_BEACON_DETECTED, this.FoundCaller);
     }
 
