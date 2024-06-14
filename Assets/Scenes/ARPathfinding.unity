@@ -372,7 +372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d54be583abb3c504d9b5b427c894bfa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MazePrefab: {fileID: 3208561867163790903, guid: 14e222c911643684385ab21a0c5bc910,
+  MazePrefab: {fileID: 8269082500482529864, guid: 14e222c911643684385ab21a0c5bc910,
     type: 3}
 --- !u!114 &421513294
 MonoBehaviour:
@@ -1238,7 +1238,7 @@ Transform:
   m_GameObject: {fileID: 1405439477}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.057, y: 0, z: 0.019}
+  m_LocalPosition: {x: 2.665, y: 0, z: 3.165}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
