@@ -195,9 +195,9 @@ GameObject:
   - component: {fileID: 14624575}
   - component: {fileID: 14624580}
   - component: {fileID: 14624579}
-  - component: {fileID: 14624576}
   - component: {fileID: 14624578}
-  - component: {fileID: 14624577}
+  - component: {fileID: 14624576}
+  - component: {fileID: 14624581}
   m_Layer: 0
   m_Name: TurretTargets
   m_TagString: Untagged
@@ -242,25 +242,6 @@ MonoBehaviour:
   - {fileID: 1429785664}
   - {fileID: 1115649312}
   - {fileID: 755313889}
---- !u!114 &14624577
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 14624569}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 14624580}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: ar_image_target_1
-  mDatasetName: Vuforia/GAMENG_RepoDB.xml
-  mCastedBehaviour: {fileID: 14624580}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!23 &14624578
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -375,7 +356,26 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 14624577}
+  mPreview: {fileID: 14624581}
+--- !u!114 &14624581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14624569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 14624580}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: ar_image_target_1
+  mDatasetName: Vuforia/GAMENG_RepoDB.xml
+  mCastedBehaviour: {fileID: 14624580}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &15785227
 GameObject:
   m_ObjectHideFlags: 0
@@ -640,7 +640,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 244185153}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: OnSelectedButton
         m_Mode: 3
@@ -773,7 +773,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 244185153}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: OnSelectedButton
         m_Mode: 3
@@ -988,7 +988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f9f5df3e1ef0042b7612e7e8aadf35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedText: {fileID: 1541590550}
+  selectedText: {fileID: 2012278114}
 --- !u!1 &268415347
 GameObject:
   m_ObjectHideFlags: 0
@@ -2393,7 +2393,7 @@ GameObject:
   - component: {fileID: 760392047}
   - component: {fileID: 760392045}
   - component: {fileID: 760392043}
-  - component: {fileID: 760392046}
+  - component: {fileID: 760392048}
   m_Layer: 0
   m_Name: PlacerTarget
   m_TagString: Untagged
@@ -2501,29 +2501,34 @@ MonoBehaviour:
     m_RotationOrder: 4
   OnTargetFound:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 244185153}
+        m_TargetAssemblyTypeName: ObjectPlaceScreen, Assembly-CSharp
+        m_MethodName: OnImageFound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnTargetLost:
     m_PersistentCalls:
-      m_Calls: []
---- !u!114 &760392046
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 760392036}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 760392047}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: ar_image_target_3
-  mDatasetName: Vuforia/GAMENG_RepoDB.xml
-  mCastedBehaviour: {fileID: 760392047}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
+      m_Calls:
+      - m_Target: {fileID: 244185153}
+        m_TargetAssemblyTypeName: ObjectPlaceScreen, Assembly-CSharp
+        m_MethodName: OnImageLost
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &760392047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2550,7 +2555,26 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 760392046}
+  mPreview: {fileID: 760392048}
+--- !u!114 &760392048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760392036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 760392047}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: ar_image_target_3
+  mDatasetName: Vuforia/GAMENG_RepoDB.xml
+  mCastedBehaviour: {fileID: 760392047}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &772675458
 GameObject:
   m_ObjectHideFlags: 0
@@ -2680,7 +2704,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 244185153}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: OnSelectedButton
         m_Mode: 3
@@ -2949,7 +2973,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d9f7a5c863cdd44094feb3fea8611ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayMsg: 
+  displayMsg: Please scan "AR Image Target #1" to begin.
 --- !u!114 &973274050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3369,7 +3393,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 244185153}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: OnDeleteAll
         m_Mode: 1
@@ -3988,7 +4012,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 244185153}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: OnSelectedButton
         m_Mode: 3
@@ -4121,7 +4145,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 244185153}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: OnSelectedButton
         m_Mode: 3
@@ -4182,7 +4206,6 @@ GameObject:
   - component: {fileID: 1790270439}
   - component: {fileID: 1790270438}
   - component: {fileID: 1790270437}
-  - component: {fileID: 1790270436}
   - component: {fileID: 1790270435}
   - component: {fileID: 1790270434}
   m_Layer: 0
@@ -4218,23 +4241,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mWorldCenterMode: 2
   mWorldCenter: {fileID: 0}
---- !u!114 &1790270436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1790270432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b6fa988622d440c49e5ba24392db7d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uiRoot: {fileID: 15785227}
-  screenPrefabLocation: UI/Screens
-  firstScreen: 
-  activeViews: []
-  viewPool: []
 --- !u!81 &1790270437
 AudioListener:
   m_ObjectHideFlags: 0
@@ -4998,7 +5004,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 244185153}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: OnShowHideClicked
         m_Mode: 1
@@ -5296,7 +5302,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 244185153}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: OnSelectedButton
         m_Mode: 3
@@ -5517,8 +5523,8 @@ GameObject:
   - component: {fileID: 2063738270}
   - component: {fileID: 2063738274}
   - component: {fileID: 2063738273}
-  - component: {fileID: 2063738272}
   - component: {fileID: 2063738271}
+  - component: {fileID: 2063738275}
   m_Layer: 0
   m_Name: EnemySpawnTarget
   m_TagString: Untagged
@@ -5586,25 +5592,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2063738272
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2063738264}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 2063738274}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: ar_image_target_3
-  mDatasetName: Vuforia/GAMENG_RepoDB.xml
-  mCastedBehaviour: {fileID: 2063738274}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!114 &2063738273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5664,18 +5651,37 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: ar_image_target_3
+  mTrackableName: ar_image_target_2
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/GAMENG_RepoDB.xml
-  mAspectRatio: 0.700813
+  mAspectRatio: 0.700606
   mImageTargetType: 0
   mWidth: 1
-  mHeight: 0.700813
+  mHeight: 0.700606
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 2063738272}
+  mPreview: {fileID: 2063738275}
+--- !u!114 &2063738275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063738264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 2063738274}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: ar_image_target_2
+  mDatasetName: Vuforia/GAMENG_RepoDB.xml
+  mCastedBehaviour: {fileID: 2063738274}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1001 &2064095725
 PrefabInstance:
   m_ObjectHideFlags: 0

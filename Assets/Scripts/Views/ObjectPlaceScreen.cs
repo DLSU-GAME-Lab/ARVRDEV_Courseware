@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Vuforia;
 
 
 public class ObjectPlaceScreen : MonoBehaviour {
@@ -13,7 +14,7 @@ public class ObjectPlaceScreen : MonoBehaviour {
 	private bool showToggle = true;
 
 	// Use this for initialization
-	void Start () {
+	void Awake() {
 		EventBroadcaster.Instance.AddObserver (EventNames.ExtendTrackEvents.ON_TARGET_SCAN, this.OnTargetScan);
 		this.gameObject.SetActive (false);
 	}
@@ -51,6 +52,18 @@ public class ObjectPlaceScreen : MonoBehaviour {
 		EventBroadcaster.Instance.PostEvent (EventNames.ExtendTrackEvents.ON_DELETE_ALL);
 	}
 
+	public void OnImageFound() {
+		InfoScreen infoScreen = (InfoScreen)ViewHandler.Instance.FindActiveView(ViewNames.INFO_SCREEN_NAME);
+        infoScreen.SetVisibility(false);
+		this.gameObject.SetActive(true);
+		Debug.Log("Image Found");
+	}
+
+	public void OnImageLost()
+    {
+        this.gameObject.SetActive(false);
+	}
+
 	public void OnPlaneFound()
 	{
         InfoScreen infoScreen = (InfoScreen)ViewHandler.Instance.FindActiveView(ViewNames.INFO_SCREEN_NAME);
@@ -61,7 +74,6 @@ public class ObjectPlaceScreen : MonoBehaviour {
     public void OnPlaneLost()
     {
         this.gameObject.SetActive(false);
-    }
-
+	}
 
 }
