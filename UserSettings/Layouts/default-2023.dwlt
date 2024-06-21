@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 0
-    y: 65
+    x: -3
+    y: 66
     width: 1470
     height: 820
   m_ShowMode: 4
@@ -274,9 +274,9 @@ MonoBehaviour:
     m_TextWithWhitespace: "Simulator\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 244
+    x: 236
     y: 95
-    width: 929.5
+    width: 905.5
     height: 480
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -345,8 +345,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Scene\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1
-    y: 19
+    x: 233
+    y: 96
     width: 905.5
     height: 480
   m_SerializedDataModeController:
@@ -861,9 +861,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 2.3943822, y: -8.900146, z: 12.279292}
+    m_Target: {x: 2.742968, y: 0.15271378, z: 2.6302414}
     speed: 2
-    m_Value: {x: 2.3943822, y: -8.900146, z: 12.279292}
+    m_Value: {x: 2.742968, y: 0.15271378, z: 2.6302414}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -909,13 +909,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.30857852, y: -0.025682889, z: 0.00833681, w: 0.950837}
+    m_Target: {x: 0.028806588, y: -0.0000045492984, z: 0.0000039184456, w: 0.9996088}
     speed: 2
-    m_Value: {x: -0.30857852, y: 0.025682889, z: -0.00833681, w: -0.9508371}
+    m_Value: {x: 0.03030525, y: -0.000004543307, z: 0.0000039251727, w: 0.99954075}
   m_Size:
-    m_Target: 9.174336
+    m_Target: 10.029612
     speed: 2
-    m_Value: 9.174336
+    m_Value: 10.03714
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -994,7 +994,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scripts/SceneManager
+    - Assets/Scripts/ARExtendedTracking
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1004,16 +1004,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/SceneManager
+  - Assets/Scripts/ARExtendedTracking
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/leeroivillamiel/ARVRDEV_Courseware
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 732}
-    m_SelectedIDs: 108f0000
-    m_LastClickedID: 36624
-    m_ExpandedIDs: 0000000030880000328800003488000036880000
+    scrollPos: {x: 0, y: 218.81256}
+    m_SelectedIDs: e4880000
+    m_LastClickedID: 35044
+    m_ExpandedIDs: 00000000308800003488000036880000d2880000b8ba0000baba000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1172,8 +1172,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Hierarchy\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 19
+    x: -3
+    y: 96
     width: 235
     height: 749
   m_SerializedDataModeController:
@@ -1190,9 +1190,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 38daffff52deffff86faffff8cfaffff92fafffff8faffff108000001e8000006e800000ba80000090810000d6810000
+      m_SelectedIDs: d46dfcff
+      m_LastClickedID: -234028
+      m_ExpandedIDs: d0a6feff30a9feffdaabfeffe8b4feffeeb4feffeeb6feffdab8fefff2e5feff22e7feffc8e9feff0ceafeff56f9ffff5cf9fffff8fafffff4ffffff368000005c80000086800000e0800000208100009481000058db00009adb00007ce30000a4e3000050f20000a0f20000c4fc000014fd0000c6fe0000e4fe000008ff00003aff0000020001001000010036000100600001006400010088000100ae000100bc000100ea000100fc0001006e010100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1209,7 +1209,7 @@ MonoBehaviour:
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_TrimLeadingAndTrailingWhitespace: 0
-        m_ClientGUIView: {fileID: 2}
+        m_ClientGUIView: {fileID: 0}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0

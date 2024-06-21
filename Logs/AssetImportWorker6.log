@@ -8117,3 +8117,78 @@ Memory consumption went from 380.7 MB to 378.3 MB.
 Total: 10.665000 ms (FindLiveObjects: 0.220042 ms CreateObjectMapping: 0.199292 ms MarkObjects: 8.235375 ms  DeleteObjects: 2.009708 ms)
 
 Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 2973.790552 seconds.
+  path: Assets/Materials/CubeMaterial_1.mat
+  artifactKey: Guid(6de9bdb88ffe2dc43896c21fccf1b3a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/CubeMaterial_1.mat using Guid(6de9bdb88ffe2dc43896c21fccf1b3a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '12285c3723f8875ea8a4307a49a642ee') in 0.599063083 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Materials/GlassMaterial_1.mat
+  artifactKey: Guid(089ac4d3b8bc7564f864176206aeb905) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/GlassMaterial_1.mat using Guid(089ac4d3b8bc7564f864176206aeb905) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '526854097215b7cf111777be1837b567') in 0.39548725 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000235 seconds.
+  path: Assets/Materials/Spider_Eye.mat
+  artifactKey: Guid(19c4bb1c8ef1b194485c3f5be36f0491) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Spider_Eye.mat using Guid(19c4bb1c8ef1b194485c3f5be36f0491) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f7096808dfe7468e04c2f1ea6c5e5800') in 0.112260792 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000082 seconds.
+  path: Assets/Materials/SH3.mat
+  artifactKey: Guid(b98c9d5ad4015894b80df0bf43df11de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/SH3.mat using Guid(b98c9d5ad4015894b80df0bf43df11de) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'df1d4fc270f3b69861d9c31afbd645f5') in 0.064445333 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000120 seconds.
+  path: Assets/Materials/Spinnen_Bein_tex_COLOR_.mat
+  artifactKey: Guid(933d8c24dade0c243963dbfab1a4c61c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Spinnen_Bein_tex_COLOR_.mat using Guid(933d8c24dade0c243963dbfab1a4c61c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3bdc3626d643146c3f7143ec154468ad') in 0.007447958 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000150 seconds.
+  path: Assets/Materials/CustomMetalMaterial.mat
+  artifactKey: Guid(a2f076e56a5712b4b836b42deb517369) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/CustomMetalMaterial.mat using Guid(a2f076e56a5712b4b836b42deb517369) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f5bd246f6f2e3158f41c02a8e5636ff5') in 0.165061833 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 5
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000198 seconds.
+  path: Assets/Materials/DLSU Material.mat
+  artifactKey: Guid(cb51a23bee1c7194490912b73d9e9bea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/DLSU Material.mat using Guid(cb51a23bee1c7194490912b73d9e9bea) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '63680c04bbf11662bdb393608f55adc7') in 0.116724416 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 19.152321 seconds.
+  path: Assets/textures/SH3.png
+  artifactKey: Guid(e593a3d13908ad1479a2f60645ac8233) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/textures/SH3.png using Guid(e593a3d13908ad1479a2f60645ac8233) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '25059d8af8a5d03922e81216189a4c32') in 0.049572791 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000282 seconds.
+  path: Assets/textures/Spinnen_Bein_tex_COLOR_.png
+  artifactKey: Guid(a35d8ca7c6e39e0468a48362c8f36ff7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/textures/Spinnen_Bein_tex_COLOR_.png using Guid(a35d8ca7c6e39e0468a48362c8f36ff7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2b2fe47b08f1c405e500dacae806b470') in 0.006146458 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
