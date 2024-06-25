@@ -1132,7 +1132,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d54be583abb3c504d9b5b427c894bfa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MazePrefab: {fileID: 0}
+  MazePrefab: {fileID: 8269082500482529864, guid: 14e222c911643684385ab21a0c5bc910,
+    type: 3}
 --- !u!114 &1405439479
 MonoBehaviour:
   m_ObjectHideFlags: 0
