@@ -15,6 +15,8 @@ public class PlaceObjects : MonoBehaviour
     private List<ARRaycastHit> hits = new List<ARRaycastHit>();
     private List<GameObject> buildingsPlaced = new List<GameObject>();
 
+    private bool isActive = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -64,33 +66,31 @@ public class PlaceObjects : MonoBehaviour
                 Pose pose = hit.pose;
                 GameObject toSpawn = ObjectPlacerManager.Instance.GetObjectByID();
                 GameObject obj;
-                try
-                {
-                    obj = Instantiate(toSpawn, pose.position + toSpawn.transform.position, pose.rotation);
-                    obj.SetActive(true);
-                    buildingsPlaced.Add(obj);
-                }
-                catch (Exception e)
-                {
 
-                }
+                if (toSpawn == null) return;
+
+                obj = Instantiate(toSpawn, pose.position + toSpawn.transform.position, pose.rotation);
+                obj.SetActive(isActive);
+                buildingsPlaced.Add(obj);
             }
         }
     }
 
     private void OnShowAllObjects()
     {
+        isActive = true;
         buildingsPlaced.ForEach(obj =>
         {
-            obj.SetActive(true);
+            obj.SetActive(isActive);
         });
     }
 
     private void OnHideAllObjects()
     {
+        isActive = false;
         buildingsPlaced.ForEach(obj =>
         {
-            obj.SetActive(false);
+            obj.SetActive(isActive);
         });
 
     }

@@ -12,7 +12,7 @@ public class SceneNames {
 	public const string AR_EXTENDED_TRACKING_SCENE = "ARExtendedTracking";
     public const string AR_OBJECT_PLACER_SCENE = "ARVirtualObjectPlacer";
 	public const string OCCLUSION_SCENE = "3DObjectScene";
-	public const string USER_DEFINED_TARGET_SCENE = "UserDefinedTargetScene";
+	public const string AR_MARKERLESS_SCENE = "ARMarkerlessScene";
 	public const string BLUETOOTH_AR_SCENE = "BluetoothARScene";
     public const string AR_VIDEO_PLAYBACK = "ARVideoPlayback";
     public const string AR_PATH_FINDING = "ARPathfinding";

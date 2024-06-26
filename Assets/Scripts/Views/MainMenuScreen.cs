@@ -28,8 +28,8 @@ public class MainMenuScreen : View {
 		LoadManager.Instance.LoadScene (SceneNames.OCCLUSION_SCENE);
 	}
 
-	public void OnUserDefinedTargetsClicked() {
-		LoadManager.Instance.LoadScene (SceneNames.USER_DEFINED_TARGET_SCENE);
+	public void OnARMarkerlessClicked() {
+		LoadManager.Instance.LoadScene (SceneNames.AR_MARKERLESS_SCENE);
 	}
 
 	public void OnBluetoothDemoClicked() {

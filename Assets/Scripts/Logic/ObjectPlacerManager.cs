@@ -47,6 +47,7 @@ public class ObjectPlacerManager : MonoBehaviour {
 	}
 
 	public GameObject GetObjectByID() {
-		return this.placeableObjectsCopy[this.currentID];
+			if (currentID == -1) { return null; }
+            return this.placeableObjectsCopy[this.currentID];
 	}
 }

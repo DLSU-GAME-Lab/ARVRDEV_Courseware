@@ -339,7 +339,7 @@ GameObject:
   - component: {fileID: 114684031447120820}
   - component: {fileID: 114918304999359152}
   m_Layer: 5
-  m_Name: UserDefinedBtn
+  m_Name: ARMarkerlessBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -448,8 +448,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114113354668782122}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnUserDefinedTargetsClicked
+        m_TargetAssemblyTypeName: MainMenuScreen, Assembly-CSharp
+        m_MethodName: OnARMarkerlessClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -820,7 +820,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: User Defined Targets
+  m_Text: AR Markerless
 --- !u!1 &1253372401944448
 GameObject:
   m_ObjectHideFlags: 0
