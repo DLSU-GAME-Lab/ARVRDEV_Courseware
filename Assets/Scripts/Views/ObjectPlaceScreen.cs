@@ -13,15 +13,21 @@ public class ObjectPlaceScreen : MonoBehaviour {
 
 	private bool showToggle = true;
 
-	// Use this for initialization
-	void Awake() {
+	public const string BUILDING_ID_PARAM = "BUILDING_ID_PARAM";
+
+    // Use this for initialization
+    void Awake() {
 		EventBroadcaster.Instance.AddObserver (EventNames.ExtendTrackEvents.ON_TARGET_SCAN, this.OnTargetScan);
-		this.gameObject.SetActive (false);
+		EventBroadcaster.Instance.AddObserver(EventNames.ARMarkerless.ON_PLANE_DETECTED, this.OnPlaneFound);
+        EventBroadcaster.Instance.AddObserver(EventNames.ARMarkerless.ON_PLANE_LOST, this.OnPlaneLost);
+        this.gameObject.SetActive (false);
 	}
 
 	void OnDestroy() {
 		EventBroadcaster.Instance.RemoveObserver (EventNames.ExtendTrackEvents.ON_TARGET_SCAN);
-	}
+        EventBroadcaster.Instance.RemoveObserver(EventNames.ARMarkerless.ON_PLANE_DETECTED);
+        EventBroadcaster.Instance.RemoveObserver(EventNames.ARMarkerless.ON_PLANE_DETECTED);
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -33,9 +39,13 @@ public class ObjectPlaceScreen : MonoBehaviour {
 	}
 
 	public void OnSelectedButton(int buildingID) {
-		this.selectedText.text = "Selected: Building " +buildingID;
-		ObjectPlacerManager.Instance.SetSelected (buildingID);
-	}
+		Parameters parameters = new Parameters();
+        parameters.PutExtra(BUILDING_ID_PARAM, buildingID);
+
+        EventBroadcaster.Instance.PostEvent(EventNames.ARMarkerless.ON_CHANGE_BUILDING, parameters);
+        this.selectedText.text = "Selected: Building " + buildingID;
+        ObjectPlacerManager.Instance.SetSelected(buildingID);
+    }
 
 	public void OnShowHideClicked() {
 		this.showToggle = !this.showToggle;
@@ -73,6 +83,8 @@ public class ObjectPlaceScreen : MonoBehaviour {
 
     public void OnPlaneLost()
     {
+        InfoScreen infoScreen = (InfoScreen)ViewHandler.Instance.FindActiveView(ViewNames.INFO_SCREEN_NAME);
+        infoScreen.SetVisibility(true);
         this.gameObject.SetActive(false);
 	}
 

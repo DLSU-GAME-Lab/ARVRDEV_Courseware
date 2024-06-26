@@ -52,6 +52,14 @@ public class EventNames {
         public const string ON_RESET_CLICKED = "ON_RESET_CLICKED";
     }
 
+	public class ARMarkerless
+	{
+		public const string ON_CHANGE_BUILDING = "ON_CHANGE_BUILDING";
+        public const string ON_PLANE_DETECTED = "ON_PLANE_DETECTED";
+        public const string ON_PLANE_LOST = "ON_PLANE_LOST";
+
+    }
+
 }
 
 

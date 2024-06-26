@@ -48,11 +48,11 @@ EditorBuildSettings:
     path: Assets/Scenes/ARImageViewer.unity
     guid: 8352a667675267644b6dea34f2fef95e
   m_configObjects:
-    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: f8b1a81cb7a4e504fa4806f0db3e4d4b,
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 75a51218f8651a7469dd87694c0766a2,
       type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 21d3034f1b0b10141847747cb23b8327,
       type: 2}
-    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 73a4614236c40eb4b88464ed802fc4e8,
+    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 4af34bb066aac33448ed032ea8ddd358,
       type: 2}
     com.unity.xr.magicleap.magic_leap_settings: {fileID: 11400000, guid: 4f2dda7fb89f139448aab8b80f8fcede,
       type: 2}
