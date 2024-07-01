@@ -52,6 +52,11 @@ public class MainMenuScreen : View {
         LoadManager.Instance.LoadScene(SceneNames.AR_WRECKING_BALL_SCENE);
     }
 
+    public void OnClawMachineClicked()
+    {
+        LoadManager.Instance.LoadScene(SceneNames.AR_CLAW_MACHINE);
+    }
+
     public void OnARBoxClicked() {
         LoadManager.Instance.LoadScene(SceneNames.AR_BOX_SCENE);
     }
