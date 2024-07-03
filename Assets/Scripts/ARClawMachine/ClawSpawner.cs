@@ -40,9 +40,9 @@ public class Clawspawner : MonoBehaviour
     {
         for (int i = 0; i < 20; i++)
         {
-            Vector3 position = new Vector3(Random.Range(-0.1f, 0.5f), -0.6f, Random.Range(0f, 0.5f));
+            Vector3 position = new Vector3(Random.Range(-0.1f, 0.5f), 0f, Random.Range(0f, 0.5f));
+            Debug.Log(position);
             Instantiate(PrizePrefab,position,PrizePrefab.transform.rotation,ClawMachinePrefab.transform);
-
         }
     }
 
