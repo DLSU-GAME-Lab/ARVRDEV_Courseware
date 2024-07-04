@@ -43,8 +43,8 @@ MonoBehaviour:
     y: 665
     width: 1215
     height: 322
-  m_MinSize: {x: 50, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 51, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 11}
   m_Panes:
   - {fileID: 13}
@@ -219,8 +219,8 @@ MonoBehaviour:
     y: 0
     width: 335
     height: 987
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 12}
@@ -245,8 +245,8 @@ MonoBehaviour:
     y: 0
     width: 308
     height: 987
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -275,7 +275,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 738
+    y: 684
     width: 1214
     height: 301
   m_SerializedDataModeController:
@@ -311,8 +311,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1523
-    y: 73
+    x: 1524
+    y: 19
     width: 334
     height: 966
   m_SerializedDataModeController:
@@ -617,7 +617,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 73
+    y: 19
     width: 1214
     height: 644
   m_SerializedDataModeController:
@@ -1210,7 +1210,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.3210671, y: 0.6245916, z: -0.3138294, w: -0.6389984}
     speed: 2
-    m_Value: {x: -0.32106605, y: 0.62458956, z: -0.31382838, w: -0.6389963}
+    m_Value: {x: -0.3210671, y: 0.6245916, z: -0.3138294, w: -0.6389983}
   m_Size:
     m_Target: 2.0142422
     speed: 2
@@ -1267,8 +1267,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Hierarchy\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1215
-    y: 73
+    x: 1216
+    y: 19
     width: 306
     height: 966
   m_SerializedDataModeController:
@@ -1285,8 +1285,8 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: b0faffff
-      m_LastClickedID: -1360
+      m_SelectedIDs: 
+      m_LastClickedID: 0
       m_ExpandedIDs: f8faffff1a8c0000788c0000968c0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0

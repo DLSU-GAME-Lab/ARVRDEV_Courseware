@@ -12,6 +12,9 @@ public class Clawspawner : MonoBehaviour
     private GameObject PrizePrefab;
     private bool firstImageFound = false;
 
+    [SerializeField]
+    private GameObject[] prizes;
+
 
     // Start is called before the first frame update
     void Start()
@@ -32,24 +35,28 @@ public class Clawspawner : MonoBehaviour
             GameObject.Find("InfoScreen").SetActive(false);
             ControlScreen.SetActive(true);
             ClawMachinePrefab.SetActive(true);
+            firstImageFound = true;
         }
         Invoke("PrizeSpawner", 0.2f);
     }
 
     public void PrizeSpawner()
     {
+        Debug.Log("I got here");
         for (int i = 0; i < 20; i++)
         {
             Vector3 position = new Vector3(Random.Range(-0.1f, 0.5f), 0f, Random.Range(0f, 0.5f));
             Debug.Log(position);
-            Instantiate(PrizePrefab,position,PrizePrefab.transform.rotation,ClawMachinePrefab.transform);
+            prizes[i]=Instantiate(PrizePrefab,position,PrizePrefab.transform.rotation,ClawMachinePrefab.transform);
         }
     }
 
 
     public void OnImageLost()
     {
-        ControlScreen.SetActive(false);
-        ClawMachinePrefab.SetActive(false);
+        for (int i = 0;i < prizes.Length; i++)
+        {
+            Destroy(prizes[i]);
+        }
     }
 }
