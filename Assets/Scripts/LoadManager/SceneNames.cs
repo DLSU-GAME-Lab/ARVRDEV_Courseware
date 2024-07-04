@@ -22,5 +22,6 @@ public class SceneNames {
     public const string AR_BOX_SCENE = "ARBoxScene";
     public const string AR_PHOTOREALISM_SCENE = "ARPhotoRealism";
     public const string AR_IMAGE_VIEWER_SCENE = "ARImageViewer";
+    public const string AR_MULTIPLE_TEXTBOX = "ARMultipleTextbox";
 
 }

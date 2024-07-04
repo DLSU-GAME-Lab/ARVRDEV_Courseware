@@ -61,6 +61,11 @@ public class MainMenuScreen : View {
         LoadManager.Instance.LoadScene(SceneNames.AR_BOX_SCENE);
     }
 
+    public void OnARMultipleTextboxClicked()
+    {
+        LoadManager.Instance.LoadScene(SceneNames.AR_MULTIPLE_TEXTBOX);
+    }
+
     public void OnARPhotorealismClicked() {
         LoadManager.Instance.LoadScene(SceneNames.AR_PHOTOREALISM_SCENE);
     }
