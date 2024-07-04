@@ -1982,6 +1982,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 65941715738351202, guid: 9875d58942314254f913fedd573d9784,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 54957287664959902, guid: 9875d58942314254f913fedd573d9784, type: 3}
     m_RemovedGameObjects: []
@@ -2850,6 +2855,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 65941715738351202, guid: 9875d58942314254f913fedd573d9784,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 54957287664959902, guid: 9875d58942314254f913fedd573d9784, type: 3}
     m_RemovedGameObjects: []
@@ -3194,6 +3204,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 65941715738351202, guid: 9875d58942314254f913fedd573d9784,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 54957287664959902, guid: 9875d58942314254f913fedd573d9784, type: 3}
     m_RemovedGameObjects: []
@@ -3249,7 +3264,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 7, y: 7}
+  m_SizeDelta: {x: 5, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1434371139
 MonoBehaviour:
@@ -3972,7 +3987,7 @@ MonoBehaviour:
   m_Script: {fileID: -1826476478, guid: 8a9a760f95896c34689febc965510927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mWorldCenterMode: 2
+  mWorldCenterMode: 1
   mWorldCenter: {fileID: 0}
 --- !u!81 &1790270437
 AudioListener:

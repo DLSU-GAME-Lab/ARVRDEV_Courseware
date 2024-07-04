@@ -5,6 +5,7 @@ using UnityEngine;
 public class BaseTurret : MonoBehaviour {
 
     [SerializeField] private Animator animator;
+    private bool isFiring = false;
 
     public const string FIRING_ANIM_KEY = "Firing";
 
@@ -28,13 +29,19 @@ public class BaseTurret : MonoBehaviour {
 
     public void FireTurretEndless() {
         this.animator.SetBool(FIRING_ANIM_KEY, true);
+        isFiring = true;
     }
 
     public void StopTurret() {
         this.animator.SetBool(FIRING_ANIM_KEY, false);
+        isFiring = false;
     }
 
     public bool IsTurretFiring() {
         return this.animator.GetBool(FIRING_ANIM_KEY);
+    }
+
+    public bool GetIsFiring() {
+        return this.isFiring;
     }
 }
