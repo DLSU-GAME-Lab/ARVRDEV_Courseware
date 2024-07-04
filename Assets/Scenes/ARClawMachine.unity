@@ -1377,6 +1377,7 @@ MonoBehaviour:
   clawRotationDuration: 1
   dropDuration: 0.5
   liftDuration: 0.5
+  craneMoveSpeed: 0.4
 --- !u!1 &632655028
 GameObject:
   m_ObjectHideFlags: 0
@@ -4881,11 +4882,21 @@ PrefabInstance:
       propertyPath: CraneParent
       value: 
       objectReference: {fileID: 41510729}
+    - target: {fileID: 5949085824669609282, guid: 38f6134cca61d2e4a9cca16fbd77d6f6,
+        type: 3}
+      propertyPath: craneMoveSpeed
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 6403008687321212007, guid: 38f6134cca61d2e4a9cca16fbd77d6f6,
         type: 3}
       propertyPath: CraneParent
       value: 
       objectReference: {fileID: 41510729}
+    - target: {fileID: 6403008687321212007, guid: 38f6134cca61d2e4a9cca16fbd77d6f6,
+        type: 3}
+      propertyPath: craneMoveSpeed
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 6573929469746531571, guid: 38f6134cca61d2e4a9cca16fbd77d6f6,
         type: 3}
       propertyPath: m_Pivot.x
@@ -4991,11 +5002,21 @@ PrefabInstance:
       propertyPath: CraneParent
       value: 
       objectReference: {fileID: 41510729}
+    - target: {fileID: 7029567414564901674, guid: 38f6134cca61d2e4a9cca16fbd77d6f6,
+        type: 3}
+      propertyPath: craneMoveSpeed
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 9217010146185563938, guid: 38f6134cca61d2e4a9cca16fbd77d6f6,
         type: 3}
       propertyPath: CraneParent
       value: 
       objectReference: {fileID: 41510729}
+    - target: {fileID: 9217010146185563938, guid: 38f6134cca61d2e4a9cca16fbd77d6f6,
+        type: 3}
+      propertyPath: craneMoveSpeed
+      value: 0.4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

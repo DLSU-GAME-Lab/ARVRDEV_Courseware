@@ -9,7 +9,7 @@ public class MoveCrane : MonoBehaviour
 {
     [SerializeField]
     private GameObject CraneParent;
-    public float craneMoveSpeed = 10.0f;
+    public float craneMoveSpeed = 0.4f;
     private bool buttonHeld = false;
     private float worldPositionX;
     private float worldPositionZ;
