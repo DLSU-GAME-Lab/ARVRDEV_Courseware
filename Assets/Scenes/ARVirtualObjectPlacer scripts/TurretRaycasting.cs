@@ -26,12 +26,12 @@ public class TurretRaycasting : MonoBehaviour
             Debug.Log("HIT: " + hit.transform.name);
             if(hit.collider.gameObject != latestObjHit)
             {
-                if(hit.collider.gameObject.GetComponent<BaseTurret>().GetIsFiring() == false)
+                if(hit.collider.gameObject.GetComponent<BaseTurret>().IsTurretFiring() == false)
                 {
                     hit.collider.gameObject.GetComponent<BaseTurret>().FireTurretEndless();
                     latestObjHit = hit.collider.gameObject;
                 } 
-                else if(hit.collider.gameObject.GetComponent<BaseTurret>().GetIsFiring() == true)
+                else if(hit.collider.gameObject.GetComponent<BaseTurret>().IsTurretFiring() == true)
                 {
                     hit.collider.gameObject.GetComponent<BaseTurret>().StopTurret();
                     latestObjHit = hit.collider.gameObject;
