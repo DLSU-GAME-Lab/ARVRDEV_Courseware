@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Clawspawner : MonoBehaviour
@@ -12,8 +13,7 @@ public class Clawspawner : MonoBehaviour
     private GameObject PrizePrefab;
     private bool firstImageFound = false;
 
-    [SerializeField]
-    private GameObject[] prizes;
+    private GameObject[] prizeList = new GameObject[30];
 
 
     // Start is called before the first frame update
@@ -42,21 +42,26 @@ public class Clawspawner : MonoBehaviour
 
     public void PrizeSpawner()
     {
-        Debug.Log("I got here");
         for (int i = 0; i < 20; i++)
         {
-            Vector3 position = new Vector3(Random.Range(-0.1f, 0.5f), 0f, Random.Range(0f, 0.5f));
-            Debug.Log(position);
-            prizes[i]=Instantiate(PrizePrefab,position,PrizePrefab.transform.rotation,ClawMachinePrefab.transform);
+            Vector3 position = new Vector3(Random.Range(-0.1f, 0.7f), 0f, Random.Range(0f, 0.7f));
+            GameObject temp=Instantiate(PrizePrefab, position, PrizePrefab.transform.rotation, ClawMachinePrefab.transform);
+            prizeList[i] = temp;
+            
         }
     }
 
 
     public void OnImageLost()
     {
-        for (int i = 0;i < prizes.Length; i++)
+        PrizeDestroy();
+    }
+
+    public void PrizeDestroy()
+    {
+        for (int i = 0; i < prizeList.Length; i++)
         {
-            Destroy(prizes[i]);
+            Destroy(prizeList[i]);
         }
     }
 }
