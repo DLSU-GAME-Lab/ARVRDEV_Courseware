@@ -46,11 +46,6 @@ public class ClawController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("space"))
-        {
-            Debug.Log(CraneParent.transform.position);
-            Debug.Log(CraneParent.transform.localPosition);
-        }
 
         if (dropPressed == true)
         {
@@ -84,9 +79,7 @@ public class ClawController : MonoBehaviour
                         }
                         else if (CraneParent.transform.localPosition.z > -1.4f)
                         {
-                            Debug.Log(CraneParent.transform.localPosition.z);
                             CraneParent.transform.localPosition =CraneParent.transform.localPosition + Vector3.back *craneMoveSpeed* Time.deltaTime;
-                            Debug.Log(CraneParent.transform.localPosition.z);
                         }
                         else if (releaseTimer < releaseDuration)
                         {
