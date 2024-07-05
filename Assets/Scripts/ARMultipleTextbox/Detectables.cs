@@ -6,12 +6,10 @@ using Quaternion = UnityEngine.Quaternion;
 
 public class Detectables : MonoBehaviour
 {
+    [TextArea]
     [SerializeField] private string text;
-
-    // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -24,4 +22,5 @@ public class Detectables : MonoBehaviour
     {
         return text;
     }
+
 }

@@ -36,6 +36,10 @@ public class PlaceObjects : MonoBehaviour
 
     private void OnDestroy()
     {
+        EnhancedTouch.TouchSimulation.Disable();
+        EnhancedTouch.EnhancedTouchSupport.Disable();
+        EnhancedTouch.Touch.onFingerDown -= FingerDown;
+
         EventBroadcaster.Instance.RemoveObserver(EventNames.ExtendTrackEvents.ON_HIDE_ALL);
         EventBroadcaster.Instance.RemoveObserver(EventNames.ExtendTrackEvents.ON_SHOW_ALL);
         EventBroadcaster.Instance.RemoveObserver(EventNames.ExtendTrackEvents.ON_DELETE_ALL);

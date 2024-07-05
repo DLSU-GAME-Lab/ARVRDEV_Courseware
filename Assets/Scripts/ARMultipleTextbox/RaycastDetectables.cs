@@ -16,10 +16,13 @@ public class RaycastDetectables : MonoBehaviour
     [SerializeField] private GameObject textboxPrefab;
     [SerializeField] private TextMeshProUGUI uiText;
 
+    [SerializeField] private GameObject hint;
+    private List<GameObject> hints = new List<GameObject>();
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        EventBroadcaster.Instance.AddObserver(EventNames.ARMultipleTextbox.ON_SHOW_HINTS, DisplayHints);
     }
 
     // Update is called once per frame
@@ -55,6 +58,13 @@ public class RaycastDetectables : MonoBehaviour
         EnhancedTouch.Touch.onFingerDown -= findDetectable;
     }
 
+    private void OnDestroy()
+    {
+        EnhancedTouch.EnhancedTouchSupport.Disable();
+        EnhancedTouch.TouchSimulation.Disable();
+        EnhancedTouch.Touch.onFingerDown -= findDetectable;
+    }
+
     private void findDetectable(EnhancedTouch.Finger finger)
     {
         if (finger.currentTouch.tapCount != 0) return;
@@ -72,5 +82,17 @@ public class RaycastDetectables : MonoBehaviour
         textboxPrefab.transform.LookAt(hit.collider.gameObject.transform);
         uiText.text = hit.collider.gameObject.GetComponent<Detectables>().GetText();
         textboxPrefab.SetActive(true);
+    }
+
+    private void DisplayHints()
+    {
+        foreach(Transform detectable in transform.GetComponentInChildren<Transform>())
+        {
+            ray = new Ray(Camera.main.transform.position, (detectable.position - Camera.main.transform.position).normalized);
+            if (Physics.Raycast(ray, out hit, 2000f, layerToMask))
+            {
+                Instantiate(hint, hit.collider.transform.position, hit.collider.transform.rotation);
+            }
+        }
     }
 }
