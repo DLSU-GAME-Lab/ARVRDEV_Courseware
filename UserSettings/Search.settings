@@ -8,9 +8,9 @@ onBoardingDoNotAskAgain = true
 showPackageIndexes = false
 showStatusBar = false
 scopes = {
-	"last_search.5A656512" = "ref=\"Assets/Scripts/ARUserDefinedTarget/UserDefinedTargetBehavior.cs\""
+	"last_search.5A656512" = "ref=\"Assets/Scripts/Views/ObjectPlaceScreen.cs\""
 	"OpenInspectorPreview.5A656512" = "0"
-	"currentGroup.5A656512" = null
+	"currentGroup.5A656512" = ""
 }
 providers = {
 	find = {

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.4439374, g: 0.49314827, b: 0.57220477, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -93,7 +93,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 2433bce093d63448dbf5341a2d4372fe,
+    type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: cfb4c8ac9380f4d3cace4cbec7e250e6,
     type: 2}
 --- !u!196 &4
@@ -641,8 +642,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
+      - m_Target: {fileID: 2034655509555786690, guid: 3dba01fa8513141e3a3a8b0447ba6c9b,
+          type: 3}
+        m_TargetAssemblyTypeName: ObjectPlaceScreen, Assembly-CSharp
         m_MethodName: OnSelectedButton
         m_Mode: 3
         m_Arguments:
@@ -774,8 +776,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
+      - m_Target: {fileID: 2034655509555786690, guid: 3dba01fa8513141e3a3a8b0447ba6c9b,
+          type: 3}
+        m_TargetAssemblyTypeName: ObjectPlaceScreen, Assembly-CSharp
         m_MethodName: OnSelectedButton
         m_Mode: 3
         m_Arguments:
@@ -989,7 +992,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f9f5df3e1ef0042b7612e7e8aadf35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedText: {fileID: 2012278114}
+  selectedText: {fileID: 1541590550}
 --- !u!1 &268415347
 GameObject:
   m_ObjectHideFlags: 0
@@ -1699,7 +1702,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -67.81, y: 131.92}
+  m_AnchoredPosition: {x: -85, y: 110}
   m_SizeDelta: {x: 171.61, y: 128.63}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &629934729
@@ -2334,8 +2337,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
+      - m_Target: {fileID: 2034655509555786690, guid: 3dba01fa8513141e3a3a8b0447ba6c9b,
+          type: 3}
+        m_TargetAssemblyTypeName: ObjectPlaceScreen, Assembly-CSharp
         m_MethodName: OnSelectedButton
         m_Mode: 3
         m_Arguments:
@@ -2677,6 +2681,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 2000
+  latestObjHit: {fileID: 0}
   layerMask:
     serializedVersion: 2
     m_Bits: 1024
@@ -2967,8 +2972,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
+      - m_Target: {fileID: 2034655509555786690, guid: 3dba01fa8513141e3a3a8b0447ba6c9b,
+          type: 3}
+        m_TargetAssemblyTypeName: ObjectPlaceScreen, Assembly-CSharp
         m_MethodName: OnDeleteAll
         m_Mode: 1
         m_Arguments:
@@ -3760,8 +3766,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
+      - m_Target: {fileID: 2034655509555786690, guid: 3dba01fa8513141e3a3a8b0447ba6c9b,
+          type: 3}
+        m_TargetAssemblyTypeName: ObjectPlaceScreen, Assembly-CSharp
         m_MethodName: OnSelectedButton
         m_Mode: 3
         m_Arguments:
@@ -3893,8 +3900,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
+      - m_Target: {fileID: 2034655509555786690, guid: 3dba01fa8513141e3a3a8b0447ba6c9b,
+          type: 3}
+        m_TargetAssemblyTypeName: ObjectPlaceScreen, Assembly-CSharp
         m_MethodName: OnSelectedButton
         m_Mode: 3
         m_Arguments:
@@ -4262,7 +4270,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 105.990005, y: 36.2}
+  m_AnchoredPosition: {x: 106, y: 15}
   m_SizeDelta: {x: 211.98, y: 318.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1891891297
@@ -4587,8 +4595,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
+      - m_Target: {fileID: 2034655509555786690, guid: 3dba01fa8513141e3a3a8b0447ba6c9b,
+          type: 3}
+        m_TargetAssemblyTypeName: ObjectPlaceScreen, Assembly-CSharp
         m_MethodName: OnShowHideClicked
         m_Mode: 1
         m_Arguments:
@@ -4720,8 +4729,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
+      - m_Target: {fileID: 2034655509555786690, guid: 3dba01fa8513141e3a3a8b0447ba6c9b,
+          type: 3}
+        m_TargetAssemblyTypeName: ObjectPlaceScreen, Assembly-CSharp
         m_MethodName: OnSelectedButton
         m_Mode: 3
         m_Arguments:

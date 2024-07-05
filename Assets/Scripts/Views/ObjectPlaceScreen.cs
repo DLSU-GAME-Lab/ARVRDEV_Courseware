@@ -9,8 +9,6 @@ public class ObjectPlaceScreen : MonoBehaviour {
 
 	[SerializeField] private Text selectedText;
 
-	private int eventFires = 0;
-
 	private bool showToggle = true;
 
 	public const string BUILDING_ID_PARAM = "BUILDING_ID_PARAM";
@@ -43,7 +41,7 @@ public class ObjectPlaceScreen : MonoBehaviour {
         parameters.PutExtra(BUILDING_ID_PARAM, buildingID);
 
         EventBroadcaster.Instance.PostEvent(EventNames.ARMarkerless.ON_CHANGE_BUILDING, parameters);
-        this.selectedText.text = "Selected: Building " + buildingID;
+        this.selectedText.text = "Selected: Building " + buildingID; // needs replacing, not working
         ObjectPlacerManager.Instance.SetSelected(buildingID);
     }
 
@@ -71,7 +69,10 @@ public class ObjectPlaceScreen : MonoBehaviour {
 
 	public void OnImageLost()
     {
+		InfoScreen infoScreen = (InfoScreen)ViewHandler.Instance.FindActiveView(ViewNames.INFO_SCREEN_NAME);
+		infoScreen.SetVisibility(true);
         this.gameObject.SetActive(false);
+		Debug.Log("Image NOT Found");
 	}
 
 	public void OnPlaneFound()
