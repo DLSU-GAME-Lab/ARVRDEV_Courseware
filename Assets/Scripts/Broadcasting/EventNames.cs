@@ -63,6 +63,7 @@ public class EventNames {
 	public class ARMultipleTextbox
 	{
 		public const string ON_SHOW_HINTS = "ON_SHOW_HINTS";
+        public const string ON_CLOSE_TEXTBOX = "ON_CLOSE_TEXTBOX";
 
     }
 
