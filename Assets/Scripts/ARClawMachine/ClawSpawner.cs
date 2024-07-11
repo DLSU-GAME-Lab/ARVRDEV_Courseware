@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-
+using UnityEngine.UIElements;
+using System.Threading;
 public class Clawspawner : MonoBehaviour
 {
     [SerializeField]
@@ -10,16 +11,16 @@ public class Clawspawner : MonoBehaviour
     [SerializeField]
     private GameObject ControlScreen;
     [SerializeField]
-    private GameObject PrizePrefab;
+    private GameObject[] PrizePrefabs;
     private bool firstImageFound = false;
 
-    private GameObject[] prizeList = new GameObject[30];
+    private GameObject[] prizeList = new GameObject[60];
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        PrizeSpawner();
     }
 
     // Update is called once per frame
@@ -42,12 +43,17 @@ public class Clawspawner : MonoBehaviour
 
     public void PrizeSpawner()
     {
-        for (int i = 0; i < 20; i++)
+        for (int i = 0; i < 50; i++)
         {
-            Vector3 position = new Vector3(Random.Range(-0.1f, 0.7f), 0f, Random.Range(0f, 0.7f));
-            GameObject temp=Instantiate(PrizePrefab, position, PrizePrefab.transform.rotation, ClawMachinePrefab.transform);
-            prizeList[i] = temp;
+            Vector3 position=new Vector3(0,0, 0);
+            do
+            {
+                position = new Vector3(Random.Range(-0.58f, 0.9f), Random.Range(-0.2f,0.2f), Random.Range(-0.46f, 1.1f));
+            } while ((position.x < -0.35f && position.z < 0.12) || (position.x < -0.08f && position.z < -0.09f));
             
+            GameObject temp = Instantiate(PrizePrefabs[Random.Range(0,PrizePrefabs.Length)], ClawMachinePrefab.transform);
+            temp.transform.localPosition = position;
+            prizeList[i] = temp;
         }
     }
 
