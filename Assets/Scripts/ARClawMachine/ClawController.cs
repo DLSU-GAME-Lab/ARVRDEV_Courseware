@@ -77,7 +77,7 @@ public class ClawController : MonoBehaviour
                         {
                             CraneParent.transform.localPosition =CraneParent.transform.localPosition +Vector3.left*craneMoveSpeed * Time.deltaTime;
                         }
-                        else if (CraneParent.transform.localPosition.z > -1.4f)
+                        else if (CraneParent.transform.localPosition.z > -0.93f)
                         {
                             CraneParent.transform.localPosition =CraneParent.transform.localPosition + Vector3.back *craneMoveSpeed* Time.deltaTime;
                         }
