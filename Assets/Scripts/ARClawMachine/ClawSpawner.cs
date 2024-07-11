@@ -70,4 +70,10 @@ public class Clawspawner : MonoBehaviour
             Destroy(prizeList[i]);
         }
     }
+
+    public void PrizeReset()
+    {
+        PrizeDestroy();
+        PrizeSpawner();
+    }
 }
