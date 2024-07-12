@@ -1389,14 +1389,15 @@ GameObject:
   - component: {fileID: 632655032}
   - component: {fileID: 632655031}
   - component: {fileID: 632655030}
-  - component: {fileID: 632655035}
+  - component: {fileID: 632655033}
+  - component: {fileID: 632655034}
   m_Layer: 0
   m_Name: ImageTarget
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &632655030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1438,7 +1439,7 @@ MonoBehaviour:
   OnTargetFound:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 632655033}
         m_TargetAssemblyTypeName: Clawspawner, Assembly-CSharp
         m_MethodName: OnImageFound
         m_Mode: 1
@@ -1453,7 +1454,7 @@ MonoBehaviour:
   OnTargetLost:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 632655033}
         m_TargetAssemblyTypeName: Clawspawner, Assembly-CSharp
         m_MethodName: OnImageLost
         m_Mode: 1
@@ -1491,7 +1492,7 @@ MonoBehaviour:
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 632655035}
+  mPreview: {fileID: 632655034}
 --- !u!4 &632655032
 Transform:
   m_ObjectHideFlags: 0
@@ -1504,10 +1505,31 @@ Transform:
   m_LocalPosition: {x: 0, y: -0.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 635087290}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &632655035
+--- !u!114 &632655033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632655028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5f4c089fc4cd314fa525b9212d8cfeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClawMachinePrefab: {fileID: 635087289}
+  ControlScreen: {fileID: 1372005760}
+  PrizePrefabs:
+  - {fileID: 1375590135055515721, guid: 22d69a7f4adb44e418e5b44a213e5e35, type: 3}
+  - {fileID: 1177890208962907067, guid: eeb40150bd005764289836db39090b2c, type: 3}
+  - {fileID: 4242675833411573896, guid: cb7efdd4ac477b04999cde6c66a952fa, type: 3}
+  - {fileID: 8043857968803057899, guid: d63a01ea32b726940a6109e2d5adf739, type: 3}
+  - {fileID: 5704444385105936680, guid: 0d5eb2b496a4285498db8ce077302316, type: 3}
+--- !u!114 &632655034
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1551,7 +1573,7 @@ Transform:
   m_GameObject: {fileID: 635087289}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.24497914, y: 0.6306314, z: -0.42221797}
+  m_LocalPosition: {x: -0.24497914, y: 0.65063137, z: -0.42221797}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -1564,7 +1586,7 @@ Transform:
   - {fileID: 2047252517}
   - {fileID: 922880546}
   - {fileID: 26385442}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 632655032}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &636540718
 GameObject:
@@ -3572,14 +3594,13 @@ GameObject:
   - component: {fileID: 1399680565}
   - component: {fileID: 1399680564}
   - component: {fileID: 1399680563}
-  - component: {fileID: 1399680566}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &1399680563
 AudioListener:
   m_ObjectHideFlags: 0
@@ -3654,26 +3675,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 44.139, y: 0, z: 0}
---- !u!114 &1399680566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1399680562}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5f4c089fc4cd314fa525b9212d8cfeb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ClawMachinePrefab: {fileID: 635087289}
-  ControlScreen: {fileID: 1372005760}
-  PrizePrefabs:
-  - {fileID: 1375590135055515721, guid: 22d69a7f4adb44e418e5b44a213e5e35, type: 3}
-  - {fileID: 1177890208962907067, guid: eeb40150bd005764289836db39090b2c, type: 3}
-  - {fileID: 4242675833411573896, guid: cb7efdd4ac477b04999cde6c66a952fa, type: 3}
-  - {fileID: 8043857968803057899, guid: d63a01ea32b726940a6109e2d5adf739, type: 3}
-  - {fileID: 5704444385105936680, guid: 0d5eb2b496a4285498db8ce077302316, type: 3}
 --- !u!1 &1500521226
 GameObject:
   m_ObjectHideFlags: 0
@@ -4201,7 +4202,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1650567423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4972,7 +4973,7 @@ PrefabInstance:
     - target: {fileID: 1494294347322298754, guid: 38f6134cca61d2e4a9cca16fbd77d6f6,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2995080343856372006, guid: 38f6134cca61d2e4a9cca16fbd77d6f6,
         type: 3}
@@ -4988,7 +4989,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1399680566}
+      objectReference: {fileID: 0}
     - target: {fileID: 5868533133475347401, guid: 38f6134cca61d2e4a9cca16fbd77d6f6,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -5219,6 +5220,5 @@ SceneRoots:
   - {fileID: 4735369888693261299}
   - {fileID: 1500521228}
   - {fileID: 1650567427}
-  - {fileID: 635087290}
   - {fileID: 632655032}
   - {fileID: 1399680565}
