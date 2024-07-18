@@ -33,7 +33,7 @@ public class ObjectSpace : MonoBehaviourPun {
 
         EventBroadcaster.Instance.AddObserver (EventNames.ExtendTrackEvents.ON_HIDE_ALL, this.OnHideAllObjects);
 		EventBroadcaster.Instance.AddObserver (EventNames.ExtendTrackEvents.ON_SHOW_ALL, this.OnShowAllObjects);
-		EventBroadcaster.Instance.AddObserver (EventNames.ExtendTrackEvents.ON_DELETE_ALL, this.OnDeleteAllObjects);
+		EventBroadcaster.Instance.AddObserver (EventNames.ExtendTrackEvents.ON_DELETE_ALL, this.OnDeleteAllClicked);
 	}
 
     void OnDestroy() {
@@ -58,7 +58,7 @@ public class ObjectSpace : MonoBehaviourPun {
             this.placedObjects.Add(spawnObject);
         }
 		if (obj.Code == DELETE_ALL_EVENT) {
-			this.OnDeleteAllObjects();
+			this.DeleteAllObjects();
 		}
     }
 
@@ -124,14 +124,20 @@ public class ObjectSpace : MonoBehaviourPun {
 		}
 	}
 
-	private void OnDeleteAllObjects() {
+	private void DeleteAllObjects() {
 		for(int i = 0; i < this.placedObjects.Count; i++) {
 			GameObject.Destroy (this.placedObjects [i]);
 		}
 
 		this.placedObjects.Clear ();
-		object data=null;
-		PhotonNetwork.RaiseEvent(DELETE_ALL_EVENT,data ,RaiseEventOptions.Default, SendOptions.SendReliable);
+		
 	}
+
+	private void OnDeleteAllClicked()
+	{
+		DeleteAllObjects();
+        object data = null;
+        PhotonNetwork.RaiseEvent(DELETE_ALL_EVENT, data, RaiseEventOptions.Default, SendOptions.SendReliable);
+    }
 }
 
