@@ -220,7 +220,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 461763877}
-  - {fileID: 931660964}
   - {fileID: 989171990}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -328,10 +327,34 @@ MonoBehaviour:
     m_RotationOrder: 4
   OnTargetFound:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 931660965}
+        m_TargetAssemblyTypeName: ObjectPlaceScreen, Assembly-CSharp
+        m_MethodName: OnImageFound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnTargetLost:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 931660965}
+        m_TargetAssemblyTypeName: ObjectPlaceScreen, Assembly-CSharp
+        m_MethodName: OnImageLost
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &14624580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -475,6 +498,7 @@ RectTransform:
   - {fileID: 349207161}
   - {fileID: 671092190}
   - {fileID: 244185151}
+  - {fileID: 931660964}
   - {fileID: 1292885018}
   - {fileID: 1434371138}
   m_Father: {fileID: 395980606}
@@ -595,8 +619,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 75}
-  m_SizeDelta: {x: 250, y: 75}
+  m_AnchoredPosition: {x: 0, y: 55}
+  m_SizeDelta: {x: 650, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &71224911
 MonoBehaviour:
@@ -611,7 +635,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.103}
+  m_Color: {r: 0.122641504, g: 0.122641504, b: 0.122641504, a: 0.3137255}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1043,10 +1067,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 71224910}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.12988281, y: -18.5}
-  m_SizeDelta: {x: 208, y: 98.4}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 650, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &176348482
 MonoBehaviour:
@@ -1070,10 +1094,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 1
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -2775,7 +2799,7 @@ GameObject:
   - component: {fileID: 931660966}
   - component: {fileID: 931660965}
   m_Layer: 5
-  m_Name: HudScreen
+  m_Name: HudScreen2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2790,16 +2814,16 @@ RectTransform:
   m_GameObject: {fileID: 931660963}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.03472, y: 0.03472, z: 0.03472}
+  m_LocalScale: {x: 0.6774575, y: 0.6774575, z: 0.6774575}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 802202593}
-  m_Father: {fileID: 14624575}
+  m_Father: {fileID: 15785231}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -3.117, y: 0}
-  m_SizeDelta: {x: 768, y: 576}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 185.75952}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &931660965
 MonoBehaviour:
@@ -2813,7 +2837,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f9f5df3e1ef0042b7612e7e8aadf35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedText: {fileID: 0}
+  selectedText: {fileID: 176348482}
 --- !u!222 &931660966
 CanvasRenderer:
   m_ObjectHideFlags: 0
