@@ -50,4 +50,7 @@ public class ObjectPlacerManager : MonoBehaviour {
 			if (currentID == -1) { return null; }
             return this.placeableObjectsCopy[this.currentID];
 	}
+
+	public int GetCurrentID() { return currentID; }
+
 }

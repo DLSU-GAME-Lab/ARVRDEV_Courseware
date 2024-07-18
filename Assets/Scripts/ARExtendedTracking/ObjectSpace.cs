@@ -1,4 +1,7 @@
 
+using ExitGames.Client.Photon;
+using Photon.Pun;
+using Photon.Realtime;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,12 +10,15 @@ using UnityEngine;
 /// Handles the logic for placing virtual objects through screen tap.
 /// By: NeilDG
 /// </summary>
-public class ObjectSpace : MonoBehaviour {
+public class ObjectSpace : MonoBehaviourPun {
 
 	[SerializeField] private Camera arCamera;
 
     private Vector3 cameraOffset = new Vector3(0, -8.0f, 0);
 	private List<GameObject> placedObjects;
+
+	private const byte OBJECT_PLACE_EVENT = 1;
+	private const byte DELETE_ALL_EVENT=2;
 
 	// Use this for initialization
 	void Start () {
@@ -21,16 +27,40 @@ public class ObjectSpace : MonoBehaviour {
 
 		this.placedObjects = new List<GameObject> ();
 
-		EventBroadcaster.Instance.AddObserver (EventNames.ExtendTrackEvents.ON_HIDE_ALL, this.OnHideAllObjects);
+        PhotonNetwork.NetworkingClient.EventReceived += NetworkingClient_EventReceived;
+        
+
+
+        EventBroadcaster.Instance.AddObserver (EventNames.ExtendTrackEvents.ON_HIDE_ALL, this.OnHideAllObjects);
 		EventBroadcaster.Instance.AddObserver (EventNames.ExtendTrackEvents.ON_SHOW_ALL, this.OnShowAllObjects);
 		EventBroadcaster.Instance.AddObserver (EventNames.ExtendTrackEvents.ON_DELETE_ALL, this.OnDeleteAllObjects);
 	}
 
-	void OnDestroy() {
-		EventBroadcaster.Instance.RemoveObserver (EventNames.ExtendTrackEvents.ON_HIDE_ALL);
+    void OnDestroy() {
+        PhotonNetwork.NetworkingClient.EventReceived -= NetworkingClient_EventReceived;
+        EventBroadcaster.Instance.RemoveObserver (EventNames.ExtendTrackEvents.ON_HIDE_ALL);
 		EventBroadcaster.Instance.RemoveObserver (EventNames.ExtendTrackEvents.ON_SHOW_ALL);
 		EventBroadcaster.Instance.RemoveObserver (EventNames.ExtendTrackEvents.ON_DELETE_ALL);
 	}
+
+    private void NetworkingClient_EventReceived(EventData obj)
+    {
+		if (obj.Code == OBJECT_PLACE_EVENT)
+		{
+			object[] datas =(object[]) obj.CustomData;
+			Vector3 position =(Vector3) datas[0];
+			int ObjectID = (int) datas[1];
+			ObjectPlacerManager.Instance.SetSelected(ObjectID);
+            GameObject spawnObject = GameObject.Instantiate(ObjectPlacerManager.Instance.GetObjectByID(), this.transform);
+            spawnObject.transform.position = position;
+            spawnObject.SetActive(true);
+
+            this.placedObjects.Add(spawnObject);
+        }
+		if (obj.Code == DELETE_ALL_EVENT) {
+			this.OnDeleteAllObjects();
+		}
+    }
 
     /// <summary>
     /// Used for a user-defined target. The platform is oriented towards the camera for better viewing experience.
@@ -61,9 +91,18 @@ public class ObjectSpace : MonoBehaviour {
 				spawnObject.SetActive (true);
 
 				this.placedObjects.Add (spawnObject);
+				sendObjectPlacedData(hitPos, ObjectPlacerManager.Instance.GetCurrentID());
 			}
 		}
 	}
+
+	private void sendObjectPlacedData(Vector3 position, int ObjectID)
+	{
+		object[] data=new object[] { position, ObjectID };
+		Debug.Log("IAMSENDING");
+		PhotonNetwork.RaiseEvent(OBJECT_PLACE_EVENT, data, RaiseEventOptions.Default, SendOptions.SendReliable);
+	}
+
 
 	private void OnShowAllObjects() {
 		if (this.placedObjects.Count == 0) {
@@ -91,6 +130,8 @@ public class ObjectSpace : MonoBehaviour {
 		}
 
 		this.placedObjects.Clear ();
+		object data=null;
+		PhotonNetwork.RaiseEvent(DELETE_ALL_EVENT,data ,RaiseEventOptions.Default, SendOptions.SendReliable);
 	}
 }
 
