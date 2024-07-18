@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.EnhancedTouch;
 using UnityEngine.InputSystem.HID;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
@@ -31,7 +33,29 @@ public class PlaceObjects : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        ///////////////////////////////////////////////////////////////
+        //JUST FOR TESTING
+        //if (Mouse.current.leftButton.wasPressedThisFrame)
+        //{
+        //    Debug.Log("click");
+        //    if (raycastManager.Raycast(Input.mousePosition, hits, TrackableType.PlaneWithinPolygon))
+        //    {
+        //        foreach (ARRaycastHit hit in hits)
+        //        {
+        //            Pose pose = hit.pose;
+        //            GameObject toSpawn = ObjectPlacerManager.Instance.GetObjectByID();
+        //            GameObject obj;
+
+        //            if (toSpawn == null) return;
+
+        //            obj = Instantiate(toSpawn, pose.position + toSpawn.transform.position, pose.rotation);
+        //            obj.SetActive(isActive);
+        //            buildingsPlaced.Add(obj);
+        //        }
+        //    }
+        //}
+        //END OF TEST
+        ///////////////////////////////////////////////////////////////
     }
 
     private void OnEnable()

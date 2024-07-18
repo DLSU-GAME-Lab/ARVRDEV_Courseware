@@ -437,6 +437,105 @@ MonoBehaviour:
   firstScreen: InfoScreen
   activeViews: []
   viewPool: []
+--- !u!1001 &603709187
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1478787576}
+    m_Modifications:
+    - target: {fileID: -7645085748167242171, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+        type: 3}
+      propertyPath: text
+      value: The full name of Miguel Malvar is Miguel Malvar y Carpio.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3892861736401350871, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+        type: 3}
+      propertyPath: m_Name
+      value: Name
+      objectReference: {fileID: 0}
+    - target: {fileID: 3892861736401350871, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698456624799348140, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.6009083
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698456624799348140, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.4500637
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698456624799348140, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.557706
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698456624799348140, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 26.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698456624799348140, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698456624799348140, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698456624799348140, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698456624799348140, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698456624799348140, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698456624799348140, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698456624799348140, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698456624799348140, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698456624799348140, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 907a1f8ccec8d6341acfd74ead14c6dc, type: 3}
+--- !u!4 &603709188 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7698456624799348140, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 603709187}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &608573999
 GameObject:
   m_ObjectHideFlags: 0
@@ -1019,6 +1118,100 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1096203765}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1146843255
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1478787576}
+    m_Modifications:
+    - target: {fileID: -7645085748167242171, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+        type: 3}
+      propertyPath: text
+      value: Miguel Malvar was born in Santo Tomas, Batangas on September 27, 1865.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3892861736401350871, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+        type: 3}
+      propertyPath: m_Name
+      value: Head
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698456624799348140, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.5709827
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698456624799348140, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.0434709
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698456624799348140, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.103281
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698456624799348140, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 27.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698456624799348140, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 11.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698456624799348140, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698456624799348140, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698456624799348140, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698456624799348140, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698456624799348140, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698456624799348140, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698456624799348140, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698456624799348140, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 907a1f8ccec8d6341acfd74ead14c6dc, type: 3}
+--- !u!4 &1146843256 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7698456624799348140, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1146843255}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1157427657
 GameObject:
   m_ObjectHideFlags: 0
@@ -1155,6 +1348,109 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1157427657}
   m_CullTransparentMesh: 1
+--- !u!1001 &1255746577
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1293983916}
+    m_Modifications:
+    - target: {fileID: 4649016995019079345, guid: 25fd6c4640a260c4696a77fd489195f9,
+        type: 3}
+      propertyPath: m_Name
+      value: MiguelMalvar
+      objectReference: {fileID: 0}
+    - target: {fileID: 4649016995019079345, guid: 25fd6c4640a260c4696a77fd489195f9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4786846979299933139, guid: 25fd6c4640a260c4696a77fd489195f9,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 4786846979299933139, guid: 25fd6c4640a260c4696a77fd489195f9,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 4786846979299933139, guid: 25fd6c4640a260c4696a77fd489195f9,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 4786846979299933139, guid: 25fd6c4640a260c4696a77fd489195f9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.779
+      objectReference: {fileID: 0}
+    - target: {fileID: 4786846979299933139, guid: 25fd6c4640a260c4696a77fd489195f9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.318
+      objectReference: {fileID: 0}
+    - target: {fileID: 4786846979299933139, guid: 25fd6c4640a260c4696a77fd489195f9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.115
+      objectReference: {fileID: 0}
+    - target: {fileID: 4786846979299933139, guid: 25fd6c4640a260c4696a77fd489195f9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4786846979299933139, guid: 25fd6c4640a260c4696a77fd489195f9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4786846979299933139, guid: 25fd6c4640a260c4696a77fd489195f9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4786846979299933139, guid: 25fd6c4640a260c4696a77fd489195f9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4786846979299933139, guid: 25fd6c4640a260c4696a77fd489195f9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4786846979299933139, guid: 25fd6c4640a260c4696a77fd489195f9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4786846979299933139, guid: 25fd6c4640a260c4696a77fd489195f9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4786846979299933139, guid: 25fd6c4640a260c4696a77fd489195f9,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4786846979299933139, guid: 25fd6c4640a260c4696a77fd489195f9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1478787576}
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 25fd6c4640a260c4696a77fd489195f9, type: 3}
+--- !u!4 &1255746578 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4786846979299933139, guid: 25fd6c4640a260c4696a77fd489195f9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1255746577}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1293983913
 GameObject:
   m_ObjectHideFlags: 0
@@ -1283,6 +1579,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1609584232}
+  - {fileID: 1255746578}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1293983917
@@ -1520,6 +1817,62 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1478787575
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1478787576}
+  - component: {fileID: 1478787577}
+  m_Layer: 0
+  m_Name: Detectables
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1478787576
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478787575}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1146843256}
+  - {fileID: 1623516944}
+  - {fileID: 603709188}
+  m_Father: {fileID: 1255746578}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1478787577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478787575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84ec94039a8779442bc2aa827b8b4e5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerToMask:
+    serializedVersion: 2
+    m_Bits: 1280
+  worldViewUILayer:
+    serializedVersion: 2
+    m_Bits: 256
+  textboxPrefab: {fileID: 1523745167}
+  uiText: {fileID: 382541491}
+  hint: {fileID: 7562040591924386098, guid: 4e6d8ab970737b244b47d88e1df44a92, type: 3}
 --- !u!1 &1523745167 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3867152472873228188, guid: 96f2db3462797da4eb4bf2f27f960976,
@@ -1614,6 +1967,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bunny
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 7416461a4bccbe741b7dfbf61b721098,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -1628,6 +1986,102 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 7416461a4bccbe741b7dfbf61b721098,
     type: 3}
   m_PrefabInstance: {fileID: 1609584231}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1623516943
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1478787576}
+    m_Modifications:
+    - target: {fileID: -7645085748167242171, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+        type: 3}
+      propertyPath: text
+      value: Miguel Malvar is often called as the "Forgotten President of the Philippines".
+        This is due to him taking the leadership role of the Revolutionary Army in
+        the South after Emilio Aguinaldo was captured on Palanan, Isabela.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3892861736401350871, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+        type: 3}
+      propertyPath: m_Name
+      value: Body
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698456624799348140, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 6.312965
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698456624799348140, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 9.501527
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698456624799348140, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.103281
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698456624799348140, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 26.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698456624799348140, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698456624799348140, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698456624799348140, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698456624799348140, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698456624799348140, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698456624799348140, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698456624799348140, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698456624799348140, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7698456624799348140, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 907a1f8ccec8d6341acfd74ead14c6dc, type: 3}
+--- !u!4 &1623516944 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7698456624799348140, guid: 907a1f8ccec8d6341acfd74ead14c6dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1623516943}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1714116902
 GameObject:

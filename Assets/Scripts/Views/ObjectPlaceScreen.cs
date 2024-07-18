@@ -11,8 +11,6 @@ public class ObjectPlaceScreen : MonoBehaviour {
 
 	private bool showToggle = true;
 
-	public const string BUILDING_ID_PARAM = "BUILDING_ID_PARAM";
-
     // Use this for initialization
     void Awake() {
 		EventBroadcaster.Instance.AddObserver (EventNames.ExtendTrackEvents.ON_TARGET_SCAN, this.OnTargetScan);
@@ -37,12 +35,12 @@ public class ObjectPlaceScreen : MonoBehaviour {
 	}
 
 	public void OnSelectedButton(int buildingID) {
-		Parameters parameters = new Parameters();
-        parameters.PutExtra(BUILDING_ID_PARAM, buildingID);
-
-        EventBroadcaster.Instance.PostEvent(EventNames.ARMarkerless.ON_CHANGE_BUILDING, parameters);
+		Debug.Log(selectedText.text);
+        Debug.Log(selectedText.fontStyle);
         this.selectedText.text = "Selected: Building " + buildingID; // needs replacing, not working
         ObjectPlacerManager.Instance.SetSelected(buildingID);
+
+		Debug.Log("Selected: Building " + buildingID);
     }
 
 	public void OnShowHideClicked() {

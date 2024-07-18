@@ -40,7 +40,7 @@ public class TurretRaycasting : MonoBehaviour
         }
         else
         {
-            Debug.Log("NO HIT");
+            //Debug.Log("NO HIT");
             latestObjHit = null;
         }
     }
