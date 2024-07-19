@@ -20,7 +20,7 @@ public class Clawspawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PrizeSpawner();
+
     }
 
     // Update is called once per frame
