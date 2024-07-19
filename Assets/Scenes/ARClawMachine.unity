@@ -1527,7 +1527,7 @@ MonoBehaviour:
   - {fileID: 1375590135055515721, guid: 22d69a7f4adb44e418e5b44a213e5e35, type: 3}
   - {fileID: 1177890208962907067, guid: eeb40150bd005764289836db39090b2c, type: 3}
   - {fileID: 4242675833411573896, guid: cb7efdd4ac477b04999cde6c66a952fa, type: 3}
-  - {fileID: 5903469408791756488, guid: 6b1806dc5bd802c4c88c50fb39e34923, type: 3}
+  - {fileID: 8043857968803057899, guid: d63a01ea32b726940a6109e2d5adf739, type: 3}
   - {fileID: 5704444385105936680, guid: 0d5eb2b496a4285498db8ce077302316, type: 3}
 --- !u!114 &632655034
 MonoBehaviour:
@@ -5037,8 +5037,6 @@ PrefabInstance:
         type: 3}
       propertyPath: craneMoveSpeed
       value: 1
-<<<<<<< Updated upstream
-=======
       objectReference: {fileID: 0}
     - target: {fileID: 8675088030323848525, guid: 38f6134cca61d2e4a9cca16fbd77d6f6,
         type: 3}
@@ -5063,13 +5061,12 @@ PrefabInstance:
     - target: {fileID: 8675088030323848525, guid: 38f6134cca61d2e4a9cca16fbd77d6f6,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 99
+      value: 116.8
       objectReference: {fileID: 0}
     - target: {fileID: 8675088030323848525, guid: 38f6134cca61d2e4a9cca16fbd77d6f6,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 57
->>>>>>> Stashed changes
+      value: -35.3
       objectReference: {fileID: 0}
     - target: {fileID: 9217010146185563938, guid: 38f6134cca61d2e4a9cca16fbd77d6f6,
         type: 3}
