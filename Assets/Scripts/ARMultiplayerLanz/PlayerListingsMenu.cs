@@ -5,6 +5,7 @@ using Photon.Pun;
 using Photon.Realtime;
 using Photon.Pun.Demo.Cockpit;
 using System;
+using UnityEngine.UI;
 
 public class PlayerListingsMenu : MonoBehaviourPunCallbacks
 {
@@ -12,21 +13,29 @@ public class PlayerListingsMenu : MonoBehaviourPunCallbacks
     private Transform content;
     [SerializeField]
     private PlayerListing playerListing;
+    [SerializeField]
+    private Button StartGameButton;
 
     private List<PlayerListing> playerListingList = new List<PlayerListing>();
 
     public override void OnEnable()
     {
-        if(!PhotonNetwork.IsConnected)
+        base.OnEnable();
+        if (!PhotonNetwork.IsConnected)
             return;
         if (PhotonNetwork.CurrentRoom == null || PhotonNetwork.CurrentRoom.Players == null)
             return;
 
 
-        base.OnEnable();
+        
         foreach (KeyValuePair<int, Player> playerInfo in PhotonNetwork.CurrentRoom.Players)
         {
             AddPlayerListing(playerInfo.Value);
+        }
+
+        if (PhotonNetwork.IsMasterClient)
+        {
+            StartGameButton.interactable = true;
         }
     }
 

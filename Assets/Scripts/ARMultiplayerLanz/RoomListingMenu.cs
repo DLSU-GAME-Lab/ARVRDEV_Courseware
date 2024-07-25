@@ -5,6 +5,7 @@ using Photon.Pun;
 using Photon.Realtime;
 using Photon.Pun.Demo.Cockpit;
 using TMPro;
+using UnityEngine.UI;
 
 public class RoomListingMenu : MonoBehaviourPunCallbacks
 {
@@ -12,14 +13,19 @@ public class RoomListingMenu : MonoBehaviourPunCallbacks
     private Transform content;
     [SerializeField]
     private RoomListing roomListing;
+    [SerializeField]
+    private Button CreateRoomButton;
 
     private List<RoomListing> roomListingList = new List<RoomListing>();
+
+
 
     public override void OnRoomListUpdate(List<RoomInfo> roomList)
     {
 
         Debug.Log("IgetListUpdates");
-        GameObject.Find("Status").GetComponent<TextMeshProUGUI>().text += "\nIGetListUpdates";
+        //GameObject.Find("Status").GetComponent<TextMeshProUGUI>().text += "\nIGetListUpdates";
+
         foreach (RoomInfo info in roomList)
         {
             if (info.RemovedFromList)
@@ -43,15 +49,13 @@ public class RoomListingMenu : MonoBehaviourPunCallbacks
                         roomListingList.Add(listing);
                     }
                 }
-                else
-                {
-
-                }
-                
             }
             
         }
-
+        if(roomListingList.Count > 0)
+        {
+            CreateRoomButton.interactable = false;
+        }
     }
     public override void OnJoinedLobby()
     {

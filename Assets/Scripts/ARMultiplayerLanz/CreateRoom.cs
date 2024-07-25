@@ -15,8 +15,9 @@ public class CreateRoom : MonoBehaviourPunCallbacks
     {
         if (!PhotonNetwork.IsConnected)
             return;
+        PhotonNetwork.GetCustomRoomList(PhotonNetwork.NetworkingClient.CurrentLobby, "*");
         RoomOptions options = new RoomOptions();
-        options.MaxPlayers = 4;
+        options.MaxPlayers = 8;
         Debug.Log(roomName.text);
         PhotonNetwork.CreateRoom(roomName.text, options);
     }
