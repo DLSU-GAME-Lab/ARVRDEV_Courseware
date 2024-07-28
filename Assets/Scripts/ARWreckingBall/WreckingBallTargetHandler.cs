@@ -3,35 +3,50 @@ using System.Collections.Generic;
 using UnityEngine;
 using Vuforia;
 
-public class WreckingBallTargetHandler : ImageTargetBehaviour, ITrackableEventHandler {
+public class WreckingBallTargetHandler : MonoBehaviour {
 
-    private WreckingBallPlacer wreckingBallPlacer;
+    [SerializeField] private GameObject wreckingBallObject;
+    [SerializeField] private GameObject wbPlatform;
+
+    private GameObject wbInstance;
+    private ObserverBehaviour observer;
+    private Vector3 wbOrigPosition;
 
 	// Use this for initialization
-	void Start () {
-        this.wreckingBallPlacer = this.transform.Find("WBPlatform").GetComponent<WreckingBallPlacer>();
-        this.wreckingBallPlacer.gameObject.SetActive(false);
-
-        this.RegisterTrackableEventHandler(this);
+	void Start () { 
+       this.wbOrigPosition = this.wreckingBallObject.transform.localPosition;
+       this.OnTargetLost();
     }
 
     private void OnDestroy() {
-        this.UnregisterTrackableEventHandler(this);
     }
 
     // Update is called once per frame
     void Update () {
 		
 	}
+    public void OnTargetFoundCaller() {
+        Invoke("OnTargetFound",0.2f);
+    }
 
-    public void OnTrackableStateChanged(Status previousStatus, Status newStatus) {
-        if (newStatus == Status.TRACKED) {
-            this.wreckingBallPlacer.gameObject.SetActive(true);
-            this.wreckingBallPlacer.PlotWreckingBall();
-        }
-        else if (newStatus == Status.NO_POSE) {
-            this.wreckingBallPlacer.gameObject.SetActive(false);
-            this.wreckingBallPlacer.MarkTargetLost();
+    public void OnTargetFound()
+    {
+        //reset the wrecking ball position by re-instantiating the object
+        this.wbInstance = GameObject.Instantiate(this.wreckingBallObject, this.wreckingBallObject.transform.parent);
+        this.wbInstance.transform.localPosition = this.wbOrigPosition;
+        this.wbInstance.SetActive(true);
+
+        this.wbPlatform.SetActive(true);
+    }
+
+    public void OnTargetLost()
+    {
+        this.wreckingBallObject.SetActive(false);
+        this.wbPlatform.SetActive(false);
+
+        if (this.wbInstance != null)
+        {
+            GameObject.Destroy(this.wbInstance);
         }
     }
 }

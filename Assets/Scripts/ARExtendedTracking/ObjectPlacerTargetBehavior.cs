@@ -3,17 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using Vuforia;
 
-public class ObjectPlacerTargetBehavior : ImageTargetBehaviour, ITrackableEventHandler {
+public class ObjectPlacerTargetBehavior : ImageTargetBehaviour {
 
 	private bool trackedSuccess = false;
 
 	// Use this for initialization
 	void Start () {
-        this.RegisterTrackableEventHandler(this);
 	}
 
     private void OnDestroy() {
-        this.UnregisterTrackableEventHandler(this);
     }
 
     // Update is called once per frame

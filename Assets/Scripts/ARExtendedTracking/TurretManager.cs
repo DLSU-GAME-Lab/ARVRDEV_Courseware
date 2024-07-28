@@ -1,18 +1,17 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.Events;
 using Vuforia;
 
-public class TurretManager : MonoBehaviour, IVirtualButtonEventHandler {
+public class TurretManager : MonoBehaviour {
 
-    [SerializeField] private VirtualButtonBehaviour[] virtualButtons;
+    [SerializeField] private Button[] buttons;
     [SerializeField] private BaseTurret[] turrets;
 
     // Use this for initialization
     void Start () {
-        for(int i = 0; i < this.virtualButtons.Length; i++) {
-            this.virtualButtons[i].RegisterEventHandler(this);
-        }
         
 	}
 	
@@ -21,10 +20,10 @@ public class TurretManager : MonoBehaviour, IVirtualButtonEventHandler {
 		
 	}
 
-    public void OnButtonPressed(VirtualButtonBehaviour vb) {
+    public void OnButtonPressed(Button vb) {
 
-        for (int i = 0; i < this.virtualButtons.Length; i++) {
-            if (vb.VirtualButtonName == this.virtualButtons[i].VirtualButtonName) {
+        for (int i = 0; i < this.buttons.Length; i++) {
+            if (vb == this.buttons[i]) {
 
                 if (this.turrets[i].IsTurretFiring()) {
                     this.turrets[i].StopTurret();
@@ -38,7 +37,7 @@ public class TurretManager : MonoBehaviour, IVirtualButtonEventHandler {
         
     }
 
-    public void OnButtonReleased(VirtualButtonBehaviour vb) {
+    public void OnButtonReleased(Button vb) {
         
     }
 

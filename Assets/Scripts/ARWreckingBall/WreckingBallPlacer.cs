@@ -18,8 +18,8 @@ public class WreckingBallPlacer : MonoBehaviour {
 	void Start () {
         EventBroadcaster.Instance.AddObserver(EventNames.ARWreckBallEvents.ON_RESET_CLICKED, this.OnResetSetupClicked);
 
-        this.baseOrigin = this.wbBase.transform.localPosition;
-        this.wbJoints.SetActive(false);
+        // this.baseOrigin = this.wbBase.transform.localPosition;
+        // this.wbJoints.SetActive(false);
 	}
 
     private void OnDestroy() {
@@ -32,30 +32,30 @@ public class WreckingBallPlacer : MonoBehaviour {
 	}
 
     public void MarkTargetLost() {
-        this.plotSucess = false;
-        this.wbJoints.SetActive(false);
-        this.wbBase.transform.SetParent(this.transform.parent);
-        this.wbBase.transform.localPosition = this.baseOrigin;
-        this.wbBase.transform.localRotation = Quaternion.identity;
+        // this.plotSucess = false;
+        // this.wbJoints.SetActive(false);
+        // this.wbBase.transform.SetParent(this.transform.parent);
+        // this.wbBase.transform.localPosition = this.baseOrigin;
+        // this.wbBase.transform.localRotation = Quaternion.identity;
     }
 
     public void PlotWreckingBall() {
-        if(this.plotSucess) {
-            return;
-        }
-
-        this.wbBase.SetActive(true);
-        this.wbBase.transform.SetParent(this.arCamera.transform);
-        this.wbJoints.SetActive(true);
-        this.plotSucess = true;
+        // if(this.plotSucess) {
+        //     return;
+        // }
+        //
+        // this.wbBase.SetActive(true);
+        // this.wbBase.transform.SetParent(this.arCamera.transform);
+        // this.wbJoints.SetActive(true);
+        // this.plotSucess = true;
     }
 
 
     private void OnResetSetupClicked() {
-        GameObject.Destroy(this.activePlatform);
-        GameObject template = GameObject.Instantiate(this.templateCopy, this.transform);
-        this.templateCopy.SetActive(true);
-
-        this.activePlatform = template;
+        // GameObject.Destroy(this.activePlatform);
+        // GameObject template = GameObject.Instantiate(this.templateCopy, this.transform);
+        // this.templateCopy.SetActive(true);
+        //
+        // this.activePlatform = template;
     }
 }

@@ -14,31 +14,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vuforia:
     vuforiaLicenseKey: AT221Tb/////AAAAGZxhijcKCkdVkM4vG1WkHxQmxgeEkLpjS7PKR/fZU0lYBC53iTvtBr+IvkAScBvu4EvAeCuZctuT6X5fuvWAdCQQHRWDek+JzksIdlGOMrcWyhp0wbOwqOblBQEA/P6WEsdThmK3LlwSn7SUwCaF+BVC7dpNIQE17Eg7G5fKwu5Hk/+EaOgB3HdDFcR/JQZNCvhM9y3k8RIrEUbMrNUX0pufEXXLcNHa0B9Bcbr6J6bEg4GNP6oiDj0LDH9YCCoP3KIXUfB9riuhBVx+pZf6Bcng+dtiLUATAgPjUoWMezvBRlWnFO1m6qpSLRQL/7lB6qhE6DE5Zso0XxNQ1zMAZjnsnNis6wm8TKHXxkLOQC7w
-    ufoLicenseKey: QVpNK2lSci8vLy8vQUFBQUtMZzhvRUdNbEVvbnJQR0ZKTS8xUERGcndVdEhZbTdVREczODY1cUhEc0s1WEsxL1JiQ2RLRlR2YXJJNVJOL0NPNXRON1FzbHRkWU5zdXgxeHpLRWU5M2cxbHNIRUtIU1dPend4a0kydzJiTi8xVWxxditaU1ZTT2wwTEJHdElUMS8xcnR4cDNMTCtTS3phaDU2Vk9IOHpBUUxHbStlY1EwMFhSbHQvNzdhbldhUk1oRDJhcUtlcld1d3hzYzJDY1dmQTIrMExBdU4xejUyd1FTZTBRcnJVaS9ObWhPTGxHL3F6TkI3b2t3MXZoQnpOZzlVVmJWOS9VT1JGT0JCWEVKcy9BV1FQZDZnSTNYZVYvdm1ldVpTNzg5cUtOSnhlODlQc3YxcnVLVHRrdWY2L3B5eTJ5eGx2V20rRWZ2UmliUDk1ZHY3R0N1azFJZTlQbmFwZkxVK0YxYUhvYmlwQW9MZE1KclNpZnQvcjA=
+    ufoLicenseKey: QVhzbjJKei8vLy8vQUFBQUtJSW1aWFVSTFVpTmkrU2NiVlJ6QzFkY1p5Z2ozQWVNZHR3ZU1qQUV5Mnp3dklSR1JMNzdnSHVFSDVsSjN6bHRydkx1TDM3SmwyMVdTTnRlSkU4Mmw2d05rNWFLeEttOGxCaFdZb2sxbWtVUWNBWWxsVXNLeUtXZTVmajJUbkhPNG15eHEraWxsMDN5VjJEbzZIbXp6NEs5ckdyMXkwS3hvMU1IOTJzRUR0Y1JpZTl6NWQvdFJxMVI3SGd4bzBXVC9Gc0FzSkNGZENOZ2c2TFJ4MHBUeEFEVDAyQlJyZTZZVUhQRVhVVms3ZEYrUWRTbHc1OGxYb0JoSUcwWHBVMVlsY2F4UEx0Y082aStHN0wvNm16RXlXRnVYRGNmZnNVUEpScEpQOEZXaFpuL3R1ajB4Vm1LS0pQZVFKUFIyalMwcU9uOUtKZ2xyRGtiUnlMUTRpSDBMNU8xY3cvcVFJa2hPdlMxempCeHhoSWs=
     delayedInitialization: 0
+    cameraFocusModeSetting: 2
     cameraDeviceModeSetting: -1
-    maxSimultaneousImageTargets: 5
-    maxSimultaneousObjectTargets: 1
-    useDelayedLoadingObjectTargets: 0
+    maxSimultaneousImageTargets: 2
+    virtualSceneScaleFactor: 1
     modelTargetRecoWhileExtendedTracked: 1
-    version: 8.5.9
-    eulaAcceptedVersions: '{"Values":["7.5","8.0","8.3","8.1","7.2","7.1","7.7","0.0","8.5"]}'
+    shareRecordingsInITunes: 0
+    logLevel: 0
+    version: 10.25.4
+    eulaAcceptedVersions: '{"Values":["10.22","0.0","7.5","8.0","8.3","8.1","7.2","7.1","7.7","8.5","10.24","10.25"]}'
   database:
     disableModelExtraction: 0
+  shaders:
+    depthMaskShader: {fileID: 4800000, guid: 9894afa5f3a5e4bbca625981beb1b20e, type: 3}
+    outlineShader: {fileID: 4800000, guid: 88d3b6b5cf364476ca39fcec255331b1, type: 3}
+    unlitTransparentShader: {fileID: 10750, guid: 0000000000000000f000000000000000,
+      type: 0}
+  runtimeResources:
+    register: {fileID: 11400000, guid: caeba6ecda451416c803389918ddea4a, type: 2}
   videoBackground:
     numDivisions: 2
-    videoBackgroundShader: {fileID: 4800000, guid: f40623b353e2f1943b1b3ba42975db7a,
+    videoBackgroundShader: {fileID: 4800000, guid: 144dfca22ac584ade9e538e24a5ddded,
       type: 3}
+    unlitShader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
     videoBackgroundEnabled: 1
   deviceTracker:
-    autoInitTracker: 1
     autoStartTracker: 1
-    arcoreRequirement: 0
-    autoImportArcore: 0
-  smartTerrain:
-    autoInitTracker: 0
-    autoStartTracker: 0
+    arcoreRequirement: 1
+    autoImportArcore: 1
+    thirdPartyARCoreClientDetected: 1
+  playmode:
+    mRecordingPath: 
+    playModeType: 0
   webcam:
-    deviceNameSetInEditor: A4tech USB2.0 Camera
-    turnOffWebCam: 0
     renderTextureLayer: 30
+  packageInformation:
+    ARFoundationVersion: 5.1.5

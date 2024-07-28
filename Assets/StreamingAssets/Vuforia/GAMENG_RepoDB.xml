@@ -11,12 +11,12 @@
         <ImageTarget name="ar_image_target_2" size="1.000000 0.700606"/>
         <ImageTarget name="ar_image_target_1" size="1.000000 0.700606"/>
         <ImageTarget name="ar_dlsu" size="1.000000 1.000000"/>
-        <ImageTarget name="Diablo_3_Box_Art_2x.Top" size="27.000000 7.000000"/>
-        <ImageTarget name="Diablo_3_Box_Art_2x.Left" size="7.000000 37.932076"/>
         <ImageTarget name="Diablo_3_Box_Art_2x.Back" size="27.000000 38.011765"/>
+        <ImageTarget name="Diablo_3_Box_Art_2x.Left" size="7.000000 37.932076"/>
+        <ImageTarget name="Diablo_3_Box_Art_2x.Top" size="27.000000 7.000000"/>
         <ImageTarget name="Diablo_3_Box_Art_2x.Right" size="7.000000 37.932076"/>
-        <ImageTarget name="Diablo_3_Box_Art_2x.Bottom" size="27.000000 7.000000"/>
         <ImageTarget name="Diablo_3_Box_Art_2x.Front" size="27.000000 38.011765"/>
+        <ImageTarget name="Diablo_3_Box_Art_2x.Bottom" size="27.000000 7.000000"/>
         <MultiTarget name="Diablo_3_Box_Art_2x">
             <Part name="Diablo_3_Box_Art_2x.Left" translation="-13.5 0 0" rotation="AD: 0 1 0 -90"/>
             <Part name="Diablo_3_Box_Art_2x.Right" translation="13.5 0 0" rotation="AD: 0 1 0 90"/>

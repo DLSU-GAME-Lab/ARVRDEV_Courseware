@@ -28,8 +28,8 @@ public class MainMenuScreen : View {
 		LoadManager.Instance.LoadScene (SceneNames.OCCLUSION_SCENE);
 	}
 
-	public void OnUserDefinedTargetsClicked() {
-		LoadManager.Instance.LoadScene (SceneNames.USER_DEFINED_TARGET_SCENE);
+	public void OnARMarkerlessClicked() {
+		LoadManager.Instance.LoadScene (SceneNames.AR_MARKERLESS_SCENE);
 	}
 
 	public void OnBluetoothDemoClicked() {
@@ -52,8 +52,18 @@ public class MainMenuScreen : View {
         LoadManager.Instance.LoadScene(SceneNames.AR_WRECKING_BALL_SCENE);
     }
 
+    public void OnClawMachineClicked()
+    {
+        LoadManager.Instance.LoadScene(SceneNames.AR_CLAW_MACHINE);
+    }
+
     public void OnARBoxClicked() {
         LoadManager.Instance.LoadScene(SceneNames.AR_BOX_SCENE);
+    }
+
+    public void OnARMultipleTextboxClicked()
+    {
+        LoadManager.Instance.LoadScene(SceneNames.AR_MULTIPLE_TEXTBOX);
     }
 
     public void OnARPhotorealismClicked() {
@@ -61,7 +71,7 @@ public class MainMenuScreen : View {
     }
 
     public void OnSogangButtonClicked() {
-        LoadManager.Instance.LoadScene(SceneNames.AR_SOGANG_SCENE);
+        LoadManager.Instance.LoadScene(SceneNames.AR_IMAGE_VIEWER_SCENE);
     }
 
 	public override void OnRootScreenBack ()

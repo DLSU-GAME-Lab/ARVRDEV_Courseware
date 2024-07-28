@@ -98,7 +98,7 @@ public class SelectionScreen : View {
 
     public void OnMoleculeBtnClicked(int index) {
         Parameters parameters = new Parameters();
-        parameters.PutExtra(MoleculeViewer.MOLECULE_INDEX_KEY, index);
+        // parameters.PutExtra(MoleculeViewer.MOLECULE_INDEX_KEY, index);
         EventBroadcaster.Instance.PostEvent(EventNames.ARMoleculeEvents.ON_BTN_STRUCTURE_CLICKED, parameters);
     }
 
