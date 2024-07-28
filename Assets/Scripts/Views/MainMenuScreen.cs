@@ -66,6 +66,16 @@ public class MainMenuScreen : View {
         LoadManager.Instance.LoadScene(SceneNames.AR_MULTIPLE_TEXTBOX);
     }
 
+    public void OnARMultiplayer()
+    {
+        LoadManager.Instance.LoadScene(SceneNames.AR_MULTIPLAYER);
+    }
+
+    public void OnAsteroids()
+    {
+        LoadManager.Instance.LoadScene(SceneNames.AR_ASTEROIDS);
+    }
+
     public void OnARPhotorealismClicked() {
         LoadManager.Instance.LoadScene(SceneNames.AR_PHOTOREALISM_SCENE);
     }
