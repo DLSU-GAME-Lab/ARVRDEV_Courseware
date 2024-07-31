@@ -1,9 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Reflection;
 using TMPro;
 using UnityEngine;
-using EnhancedTouch = UnityEngine.InputSystem.EnhancedTouch;
 
 public class RaycastDetectables : MonoBehaviour
 {
@@ -27,37 +25,13 @@ public class RaycastDetectables : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ///////////////////////////////////////////////////////////////
-        //JUST FOR TESTING
-        //if (Mouse.current.leftButton.wasPressedThisFrame)
-        //{
-        //    Debug.Log("click");
-        //    ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        //    if (Physics.Raycast(ray, out hit, 2000f, layerToMask) && (1 << hit.collider.gameObject.layer) != worldViewUILayer.value)
-        //    {
-        //        spawnTextbox();
-        //    }
-        //}
-        //END OF TEST
-        ///////////////////////////////////////////////////////////////
-    }
-
-    private void OnEnable()
-    {
-        EnhancedTouch.EnhancedTouchSupport.Enable();
-        EnhancedTouch.TouchSimulation.Enable();
-        EnhancedTouch.Touch.onFingerDown += findDetectable;
-    }
-
-    private void findDetectable(EnhancedTouch.Finger finger)
-    {
-        if (finger.currentTouch.tapCount != 0) return;
-
-        ray = Camera.main.ScreenPointToRay(finger.screenPosition);
-
-        if (Physics.Raycast(ray, out hit, 2000f, layerToMask) && (1 << hit.collider.gameObject.layer) != worldViewUILayer.value)
+        if (Input.GetMouseButtonDown(0))
         {
-            spawnTextbox();
+            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit, 2000f, layerToMask) && (1 << hit.collider.gameObject.layer) != worldViewUILayer.value)
+            {
+                spawnTextbox();
+            }
         }
     }
 
