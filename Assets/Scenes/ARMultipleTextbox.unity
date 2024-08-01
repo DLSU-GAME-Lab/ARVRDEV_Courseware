@@ -1209,7 +1209,7 @@ MonoBehaviour:
   layerToMask:
     serializedVersion: 2
     m_Bits: 1280
-  worldViewUILayer:
+  worldSpaceUILayer:
     serializedVersion: 2
     m_Bits: 256
   textboxPrefab: {fileID: 1523745167}
@@ -1500,7 +1500,7 @@ MonoBehaviour:
   layerToMask:
     serializedVersion: 2
     m_Bits: 1280
-  worldViewUILayer:
+  worldSpaceUILayer:
     serializedVersion: 2
     m_Bits: 256
   textboxPrefab: {fileID: 1523745167}
@@ -3313,7 +3313,7 @@ MonoBehaviour:
   layerToMask:
     serializedVersion: 2
     m_Bits: 1280
-  worldViewUILayer:
+  worldSpaceUILayer:
     serializedVersion: 2
     m_Bits: 256
   textboxPrefab: {fileID: 1523745167}
@@ -3760,6 +3760,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Textbox
       objectReference: {fileID: 0}
+    - target: {fileID: 5862777437066120671, guid: 96f2db3462797da4eb4bf2f27f960976,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7094699201772347961, guid: 96f2db3462797da4eb4bf2f27f960976,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3808,6 +3813,21 @@ PrefabInstance:
     - target: {fileID: 7094699201772347961, guid: 96f2db3462797da4eb4bf2f27f960976,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7899105906428199696, guid: 96f2db3462797da4eb4bf2f27f960976,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7899105906428199696, guid: 96f2db3462797da4eb4bf2f27f960976,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7899105906428199696, guid: 96f2db3462797da4eb4bf2f27f960976,
+        type: 3}
+      propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

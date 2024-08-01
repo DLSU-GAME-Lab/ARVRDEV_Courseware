@@ -6,7 +6,7 @@ using UnityEngine;
 public class RaycastDetectables : MonoBehaviour
 {
     [SerializeField] private LayerMask layerToMask;
-    [SerializeField] private LayerMask worldViewUILayer;
+    [SerializeField] private LayerMask worldSpaceUILayer;
     private Ray ray;
     private RaycastHit hit;
 
@@ -28,7 +28,7 @@ public class RaycastDetectables : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit, 2000f, layerToMask) && (1 << hit.collider.gameObject.layer) != worldViewUILayer.value)
+            if (Physics.Raycast(ray, out hit, 2000f, layerToMask) && (1 << hit.collider.gameObject.layer) != worldSpaceUILayer.value)
             {
                 spawnTextbox();
             }
@@ -55,7 +55,7 @@ public class RaycastDetectables : MonoBehaviour
         foreach(Transform detectable in transform.GetComponentInChildren<Transform>())
         {
             ray = new Ray(Camera.main.transform.position, (detectable.position - Camera.main.transform.position).normalized);
-            if (Physics.Raycast(ray, out hit, 2000f, layerToMask))
+            if (Physics.Raycast(ray, out hit, 2000f, layerToMask) && (1 << hit.collider.gameObject.layer) != worldSpaceUILayer.value)
             {
                 if (!collidersHit.Contains(hit.collider))
                 {

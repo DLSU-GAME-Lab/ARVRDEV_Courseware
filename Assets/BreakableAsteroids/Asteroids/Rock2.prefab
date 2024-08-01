@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 4506349960858086802}
   - component: {fileID: 3270967557742943809}
   - component: {fileID: 2831193266699088896}
-  - component: {fileID: 3177671791670645568}
   - component: {fileID: 7950008947720794758}
   - component: {fileID: -8647669999328119607}
   - component: {fileID: -2865261753827142236}
+  - component: {fileID: 6115151240415525014}
   m_Layer: 0
   m_Name: Rock2
   m_TagString: Asteroid
@@ -89,20 +89,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &3177671791670645568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2746130058158584518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4b8c7d88eebb9940b3c4196017b84df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fractured: {fileID: 6516070941938034013, guid: 8a0d737915eae7a4e8c4176987503064,
-    type: 3}
 --- !u!64 &7950008947720794758
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -165,3 +151,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+--- !u!114 &6115151240415525014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2746130058158584518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 909278249665bfc4d9d6679825eb69c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fractured: {fileID: 6516070941938034013, guid: 8a0d737915eae7a4e8c4176987503064,
+    type: 3}
