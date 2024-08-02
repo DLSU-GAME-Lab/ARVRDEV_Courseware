@@ -23,16 +23,9 @@ public class NewBehaviourScript : MonoBehaviour
         EventBroadcaster.Instance.RemoveActionAtObserver(EventNames.ARPathFindEvents.ON_BEACON_DETECTED, this.OnBeaconDetected);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnPlatformDetected()
     {
         this.SetAgentsActive(true);
-        Debug.Log("Platform detected");
     }
 
     private void OnPlatformHidden()

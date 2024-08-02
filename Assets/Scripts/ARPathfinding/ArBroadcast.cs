@@ -7,11 +7,6 @@ public class ArBroadcast : MonoBehaviour
 
     public GameObject MazePrefab;
     private GameObject MazeReference;
-    private void Start()
-    {
-
-    }
-    // Start is called before the first frame update
     public void BroadcastPlatformFound()
     {
         EventBroadcaster.Instance.PostEvent(EventNames.ARPathFindEvents.ON_PLATFORM_DETECTED);
@@ -26,7 +21,6 @@ public class ArBroadcast : MonoBehaviour
 
     public void BroadcastBeaconFound()
     {
-        Debug.Log("Func called");
         EventBroadcaster.Instance.PostEvent(EventNames.ARPathFindEvents.ON_BEACON_DETECTED);
     }
 

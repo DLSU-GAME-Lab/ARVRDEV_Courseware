@@ -18,8 +18,4 @@ public class PlayerListing : MonoBehaviour
         text.text = Player.NickName;
     }
 
-    /*public void OnClick_Button()
-    {
-        PhotonNetwork.JoinRoom(RoomInfo.Name);
-    }*/
 }

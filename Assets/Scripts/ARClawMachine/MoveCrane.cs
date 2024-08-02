@@ -20,8 +20,20 @@ public class MoveCrane : MonoBehaviour
         worldPositionX = CraneParent.transform.position.x;
         worldPositionZ = CraneParent.transform.position.z;
     }
-
+    // Attached to a move button in the UI(Pointer Down in Event Trigger Component)
+    // Detects whether a button is pressed and held down.
+    public void ButtonHeld()
+    {
+        buttonHeld = true;
+    }
+    // Attached to a move button in the UI(Pointer Up in Event Trigger Component)
+    // Detects whether a button is released.
+    public void ButtonReleased()
+    {
+        buttonHeld = false;
+    }
     // Update is called once per frame
+    // Determines which movement function to call depending on the name of the button.
     void Update()
     {
         if(buttonHeld)
@@ -49,17 +61,7 @@ public class MoveCrane : MonoBehaviour
         }
         
     }
-
-    public void ButtonHeld()
-    {
-        buttonHeld = true;
-    }
-
-    public void ButtonReleased()
-    {
-        buttonHeld = false;
-    }
-
+    // Crane movement to the left.
     public void MoveCraneLeft()
     {
         Vector3 movement = CraneParent.transform.position + Vector3.left * craneMoveSpeed * Time.deltaTime;
@@ -69,6 +71,7 @@ public class MoveCrane : MonoBehaviour
             CraneParent.GetComponent<Rigidbody>().MovePosition(movement);
         }
     }
+    // Crane movement to the right.
     public void MoveCraneRight() {
         Vector3 movement = CraneParent.transform.position + Vector3.right * craneMoveSpeed * Time.deltaTime;
 
@@ -77,6 +80,7 @@ public class MoveCrane : MonoBehaviour
             CraneParent.GetComponent<Rigidbody>().MovePosition(movement);
         }
     }
+    // Crane movement upwards.
     public void MoveCraneUp() {
         Vector3 movement = CraneParent.transform.position + Vector3.forward * craneMoveSpeed * Time.deltaTime;
 
@@ -85,6 +89,7 @@ public class MoveCrane : MonoBehaviour
             CraneParent.GetComponent<Rigidbody>().MovePosition(movement);
         }
     }
+    // Crane movement downwards.
     public void MoveCraneDown() {
         Vector3 movement = CraneParent.transform.position + Vector3.back * craneMoveSpeed * Time.deltaTime;
 
