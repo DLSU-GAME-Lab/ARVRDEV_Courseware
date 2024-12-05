@@ -19,7 +19,7 @@ public class SpawnOnSpacebar : MonoBehaviour
         }
     }
 
-    private void SpawnPrefab()
+    public void SpawnPrefab()
     {
         if (prefab != null)
         {
