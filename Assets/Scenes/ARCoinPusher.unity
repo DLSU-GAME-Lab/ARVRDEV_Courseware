@@ -1131,9 +1131,10 @@ GameObject:
   - component: {fileID: 1358847325}
   - component: {fileID: 1358847328}
   - component: {fileID: 1358847327}
+  - component: {fileID: 1358847329}
   - component: {fileID: 1358847326}
   m_Layer: 0
-  m_Name: Cube (27)
+  m_Name: CoinCounter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1148,7 +1149,7 @@ Transform:
   m_GameObject: {fileID: 1358847324}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.70710677, w: 0.7071068}
-  m_LocalPosition: {x: 0.10462823, y: -0.5371007, z: -0.017501473}
+  m_LocalPosition: {x: 0.10462823, y: -0.5371007, z: 0.061}
   m_LocalScale: {x: 0.3, y: 4.125, z: -0.72452}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1227,6 +1228,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1358847324}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1358847329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358847324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00c40153f9f98aa4db02bf1dd3617f42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfCoins: 0
 --- !u!1 &1589580329
 GameObject:
   m_ObjectHideFlags: 0
