@@ -1,16 +1,13 @@
 trackSelection = true
 refreshSearchWindowsInPlayMode = false
 fetchPreview = true
-defaultFlags = 264
+defaultFlags = 0
 keepOpen = false
 queryFolder = "Assets"
 onBoardingDoNotAskAgain = true
 showPackageIndexes = false
 showStatusBar = false
 scopes = {
-	"last_search.5A656512" = "ref=\"Assets/Materials/TransparentMaterial.mat\""
-	"OpenInspectorPreview.5A656512" = "0"
-	"currentGroup.5A656512" = ""
 }
 providers = {
 	find = {
