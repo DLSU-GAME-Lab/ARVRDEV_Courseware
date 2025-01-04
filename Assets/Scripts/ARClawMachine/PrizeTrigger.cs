@@ -8,18 +8,9 @@ public class PrizeTrigger : MonoBehaviour
     private int score=0;
     [SerializeField]
     public TextMeshProUGUI scoreText;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    // Sets an object to inactive if the object is of tag "Prize"
+    // Increments the score UI element.
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Prize" && other.gameObject.activeInHierarchy==true)

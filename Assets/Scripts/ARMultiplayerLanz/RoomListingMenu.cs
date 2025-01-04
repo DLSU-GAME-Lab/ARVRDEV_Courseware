@@ -18,8 +18,7 @@ public class RoomListingMenu : MonoBehaviourPunCallbacks
 
     private List<RoomListing> roomListingList = new List<RoomListing>();
 
-
-
+    //Updates the RoomListing for any Updates on the RoomList of the server.
     public override void OnRoomListUpdate(List<RoomInfo> roomList)
     {
 
@@ -57,6 +56,8 @@ public class RoomListingMenu : MonoBehaviourPunCallbacks
             CreateRoomButton.interactable = false;
         }
     }
+
+    //Destroys the RoomListings when joining a room.
     public override void OnJoinedLobby()
     {
         content.DestroyChildren();

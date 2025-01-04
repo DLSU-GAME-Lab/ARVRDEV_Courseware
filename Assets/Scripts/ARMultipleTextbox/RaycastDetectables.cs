@@ -1,14 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Reflection;
 using TMPro;
 using UnityEngine;
-using EnhancedTouch = UnityEngine.InputSystem.EnhancedTouch;
 
 public class RaycastDetectables : MonoBehaviour
 {
     [SerializeField] private LayerMask layerToMask;
-    [SerializeField] private LayerMask worldViewUILayer;
+    [SerializeField] private LayerMask worldSpaceUILayer;
     private Ray ray;
     private RaycastHit hit;
 
@@ -27,37 +25,13 @@ public class RaycastDetectables : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ///////////////////////////////////////////////////////////////
-        //JUST FOR TESTING
-        //if (Mouse.current.leftButton.wasPressedThisFrame)
-        //{
-        //    Debug.Log("click");
-        //    ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        //    if (Physics.Raycast(ray, out hit, 2000f, layerToMask) && (1 << hit.collider.gameObject.layer) != worldViewUILayer.value)
-        //    {
-        //        spawnTextbox();
-        //    }
-        //}
-        //END OF TEST
-        ///////////////////////////////////////////////////////////////
-    }
-
-    private void OnEnable()
-    {
-        EnhancedTouch.EnhancedTouchSupport.Enable();
-        EnhancedTouch.TouchSimulation.Enable();
-        EnhancedTouch.Touch.onFingerDown += findDetectable;
-    }
-
-    private void findDetectable(EnhancedTouch.Finger finger)
-    {
-        if (finger.currentTouch.tapCount != 0) return;
-
-        ray = Camera.main.ScreenPointToRay(finger.screenPosition);
-
-        if (Physics.Raycast(ray, out hit, 2000f, layerToMask) && (1 << hit.collider.gameObject.layer) != worldViewUILayer.value)
+        if (Input.GetMouseButtonDown(0))
         {
-            spawnTextbox();
+            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit, 2000f, layerToMask) && (1 << hit.collider.gameObject.layer) != worldSpaceUILayer.value)
+            {
+                spawnTextbox();
+            }
         }
     }
 
@@ -81,7 +55,7 @@ public class RaycastDetectables : MonoBehaviour
         foreach(Transform detectable in transform.GetComponentInChildren<Transform>())
         {
             ray = new Ray(Camera.main.transform.position, (detectable.position - Camera.main.transform.position).normalized);
-            if (Physics.Raycast(ray, out hit, 2000f, layerToMask))
+            if (Physics.Raycast(ray, out hit, 2000f, layerToMask) && (1 << hit.collider.gameObject.layer) != worldSpaceUILayer.value)
             {
                 if (!collidersHit.Contains(hit.collider))
                 {

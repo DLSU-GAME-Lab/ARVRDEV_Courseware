@@ -16,19 +16,8 @@ public class Clawspawner : MonoBehaviour
 
     private GameObject[] prizeList = new GameObject[60];
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    //Attached to image target on found.
+    //Changes the UI and calls the prize spawning function.
     public void OnImageFound()
     {
         if (firstImageFound == false)
@@ -41,6 +30,7 @@ public class Clawspawner : MonoBehaviour
         Invoke("PrizeSpawner", 0.2f);
     }
 
+    //Function that spawns all of the prizes
     public void PrizeSpawner()
     {
         for (int i = 0; i < 50; i++)
@@ -56,13 +46,14 @@ public class Clawspawner : MonoBehaviour
             prizeList[i] = temp;
         }
     }
-
-
+    //Attached to image target on image lost
+    //Destroys all prizes when the imagetarget is lost.
     public void OnImageLost()
     {
         PrizeDestroy();
     }
 
+    //Destroys all prizes
     public void PrizeDestroy()
     {
         for (int i = 0; i < prizeList.Length; i++)
@@ -70,7 +61,8 @@ public class Clawspawner : MonoBehaviour
             Destroy(prizeList[i]);
         }
     }
-
+    //Attached to reset button.
+    //Destroys then spawns all the prizes in again afterwards.
     public void PrizeReset()
     {
         PrizeDestroy();
