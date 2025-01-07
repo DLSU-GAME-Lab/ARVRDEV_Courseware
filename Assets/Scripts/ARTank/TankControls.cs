@@ -66,10 +66,11 @@ public class TankControls : MonoBehaviour
 
     public void Fire()
     {
-        GameObject newBullet = Instantiate(bulletPrefab, bulletSpawnLocation.transform.position, bulletSpawnLocation.transform.rotation, tankRoot.transform);
+        GameObject newBullet = Instantiate(bulletPrefab, bulletSpawnLocation.transform.position, bulletSpawnLocation.transform.rotation);
         newBullet.transform.rotation = tankHead.transform.rotation;
+        newBullet.transform.localScale = Vector3.one * 0.15f;
 
-        newBullet.GetComponent<Rigidbody>().velocity = Vector3.forward * 1000.0f;
+        newBullet.GetComponent<Rigidbody>().velocity = (newBullet.transform.right) * 10.0f;
     }
 
     public void Respawn()

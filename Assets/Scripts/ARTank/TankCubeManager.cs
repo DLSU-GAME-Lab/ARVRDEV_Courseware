@@ -22,6 +22,7 @@ public class TankCubeManager : MonoBehaviour
         foreach (GameObject gameObject in cubePositions.Keys)
         {
             gameObject.transform.position = cubePositions[gameObject];
+            gameObject.GetComponent<Rigidbody>().Sleep();
         }
     }
 }
