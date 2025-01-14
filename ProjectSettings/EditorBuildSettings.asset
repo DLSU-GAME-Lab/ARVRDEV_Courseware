@@ -62,6 +62,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ARCoinPusher.unity
     guid: 058bef6ebd627de4ba54b8fc7b9fee88
+  - enabled: 1
+    path: Assets/Scenes/ARTank.unity
+    guid: 377e2c2a1a4e12843a2ccab8ac863add
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 75a51218f8651a7469dd87694c0766a2,
       type: 2}

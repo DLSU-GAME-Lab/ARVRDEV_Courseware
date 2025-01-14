@@ -24,5 +24,6 @@ public class SceneNames {
     public const string AR_IMAGE_VIEWER_SCENE = "ARImageViewer";
     public const string AR_MULTIPLE_TEXTBOX = "ARMultipleTextbox";
     public const string AR_COIN_PUSHER = "ARCoinPusher";
+    public const string AR_TANK = "ARTank";
 
 }
