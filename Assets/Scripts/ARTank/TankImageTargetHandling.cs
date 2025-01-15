@@ -9,19 +9,11 @@ public class TankImageTargetHandling : MonoBehaviour
 
     public void OnTargetLost()
     {
-        foreach (Transform transform in imageTarget.transform.GetComponentsInChildren<Transform>())
-        {
-            transform.gameObject.SetActive(false);
-        }
+
     }
 
     public void OnTargetFound()
     {
-        foreach (Transform transform in imageTarget.transform.GetComponentsInChildren<Transform>())
-        {
-            transform.gameObject.SetActive(true);
-        }
 
-        tankControls.Respawn();
     }
 }
