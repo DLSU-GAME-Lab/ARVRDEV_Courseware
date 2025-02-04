@@ -42,7 +42,7 @@ public class ObjectSpace : MonoBehaviourPun {
 		EventBroadcaster.Instance.RemoveObserver (EventNames.ExtendTrackEvents.ON_SHOW_ALL);
 		EventBroadcaster.Instance.RemoveObserver (EventNames.ExtendTrackEvents.ON_DELETE_ALL);
 	}
-
+	//Receives raised event from other users and instantiates buildings based on received events.
     private void NetworkingClient_EventReceived(EventData obj)
     {
 		if (obj.Code == OBJECT_PLACE_EVENT)
@@ -96,6 +96,7 @@ public class ObjectSpace : MonoBehaviourPun {
 		}
 	}
 
+	//Sends out an event based on the placed object of this user
 	private void sendObjectPlacedData(Vector3 position, int ObjectID)
 	{
 		object[] data=new object[] { position, ObjectID };

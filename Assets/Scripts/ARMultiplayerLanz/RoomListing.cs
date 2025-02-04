@@ -13,12 +13,13 @@ public class RoomListing : MonoBehaviour
 
     public RoomInfo RoomInfo { get; private set; }
 
+    // Function for RoomListingMenu Script to set the name of newly instantiated RoomListings
     public void SetRoomInfo(RoomInfo roomInfo)
     {
         RoomInfo = roomInfo;
         text.text=roomInfo.MaxPlayers+", "+roomInfo.Name;
     }
-
+    // Function to join the room that was clicked in the lobby.
     public void OnClick_Button()
     {
         PhotonNetwork.JoinRoom(RoomInfo.Name);

@@ -14,6 +14,7 @@ public class TestConnect : MonoBehaviourPunCallbacks
     Button SetNameButton;
 
     // Start is called before the first frame update
+    // Connects this user to the designated Photon server.
     void Start()
     {
         Debug.Log("Conneting to server");
@@ -22,9 +23,8 @@ public class TestConnect : MonoBehaviourPunCallbacks
         PhotonNetwork.GameVersion = "0.0.1";
         PhotonNetwork.ConnectUsingSettings();
     }
-
-    // Update is called once per frame
-
+    //Called when the user is successfully connected to the server
+    // Sets the connection status within the UI to green, sets the set name button in the UI to interactable.
     public override void OnConnectedToMaster()
     {
         Debug.Log("Connected to Server");
