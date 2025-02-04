@@ -5,7 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Prize
-  - Asteroid
+  - Coin
   layers:
   - Default
   - TransparentFX
@@ -15,7 +15,7 @@ TagManager:
   - UI
   - 
   - Hints
-  - World Space UI
+  - World View UI
   - 
   - Detectables
   - 
