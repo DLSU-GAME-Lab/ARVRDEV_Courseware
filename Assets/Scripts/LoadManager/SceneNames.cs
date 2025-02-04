@@ -25,5 +25,7 @@ public class SceneNames {
     public const string AR_MULTIPLE_TEXTBOX = "ARMultipleTextbox";
     public const string AR_COIN_PUSHER = "ARCoinPusher";
     public const string AR_TANK = "ARTank";
+    public const string AR_MULTIPLAYER = "ARMultiplayer";
+    public const string AR_ASTEROIDS = "ARMidairMarkerless";
 
 }

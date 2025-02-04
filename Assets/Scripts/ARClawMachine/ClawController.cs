@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ClawController : MonoBehaviour
 {
-    // Start is called before the first frame update
+
     [SerializeField]
     private GameObject Claw1;
     [SerializeField]
@@ -16,8 +16,6 @@ public class ClawController : MonoBehaviour
     private GameObject Claw4;
     [SerializeField]
     private GameObject CraneParent;
-
-
 
     private bool dropPressed = false;
     public float clawRotationSpeed = 32f;
@@ -38,12 +36,14 @@ public class ClawController : MonoBehaviour
     private float releaseTimer = 0.0f;
     private float releaseDuration = 1f;
 
-    void Start()
+    //Checks if the button for grabbing has been pressed
+    //Attached to the grab button within the UI
+    public void OnDropPressed()
     {
-
+        dropPressed = true;
     }
 
-    // Update is called once per frame
+    // Implements the movement of claw grabbing. Drops claw, then closes the claw, then moves towards the prize box.
     void Update()
     {
 
@@ -101,33 +101,7 @@ public class ClawController : MonoBehaviour
                 }
             }
         }
-
-        /*if (releasePressed == true)
-        {
-            releaseTimer += Time.deltaTime;
-            if (releaseTimer < releaseDuration)
-            {
-                Claw1.transform.Rotate(Vector3.left, clawRotationSpeed * Time.deltaTime);
-                Claw2.transform.Rotate(Vector3.left, clawRotationSpeed * Time.deltaTime);
-                Claw3.transform.Rotate(Vector3.left, clawRotationSpeed * Time.deltaTime);
-                Claw4.transform.Rotate(Vector3.left, clawRotationSpeed * Time.deltaTime);
-            }
-            else
-            {
-                releaseTimer=0.0f;
-                releasePressed = false;
-            }
-        }*/
-
     }
 
-    public void OnDropPressed()
-    {
-        dropPressed = true;
-    }
 
-    public void OnReleasePressed()
-    {
-        releasePressed = true;
-    }
 }

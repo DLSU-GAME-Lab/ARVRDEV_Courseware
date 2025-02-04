@@ -14,21 +14,19 @@ public class ScreenManager : MonoBehaviourPunCallbacks
     GameObject NameScreen;
     [SerializeField]
     private TextMeshProUGUI playerName;
-
-
-    // Start is called before the first frame update
+    //Changes the UI from lobby screen to Room Screen on joining a room
     public override void OnJoinedRoom()
     {
         RoomScreen.SetActive(true);
         LobbyScreen.SetActive(false);
     }
-
+    // Changes the UI from Room Screen to Lobby Screen on leaving a room
     public override void OnLeftRoom()
     {
         RoomScreen.SetActive(false);
         LobbyScreen.SetActive(true);
     }
-
+    // Changes the UI from Name setting screen to Lobby Screen
     public void OnClickSetName()
     {
         PhotonNetwork.NickName=playerName.text;
