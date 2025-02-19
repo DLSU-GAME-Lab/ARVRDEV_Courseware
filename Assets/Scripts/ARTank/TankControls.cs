@@ -21,7 +21,7 @@ public class TankControls : MonoBehaviour
     [SerializeField] private float maxSpeed = 100.0f;
 
     private Vector3 tankAcceleration = Vector3.zero;
-    private float tankRotation = 0.0f;
+    [SerializeField] private float tankRotation = 0.0f;
     private float turretRotation = 0.0f;
 
     private void Start()
@@ -34,11 +34,13 @@ public class TankControls : MonoBehaviour
         tankRB.AddForce(tankAcceleration);
         transform.Rotate(Vector3.up * tankRotation);
         tankHead.transform.Rotate(Vector3.up * turretRotation);
+        //tankRB.AddTorque(Vector3.up * tankRotation, ForceMode.VelocityChange);
     }
 
     // turns the entire tank
     public void Turn(float direction)
     {
+        tankRB.angularVelocity = Vector3.zero;
         tankRotation = direction * turnRate * Time.deltaTime;
     }
 
