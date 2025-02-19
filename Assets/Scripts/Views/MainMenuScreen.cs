@@ -48,9 +48,9 @@ public class MainMenuScreen : View {
         LoadManager.Instance.LoadScene(SceneNames.AR_MOLECULE_VIEWER);
     }
 
-    public void OnWreckBallClicked() {
+    /*public void OnWreckBallClicked() {
         LoadManager.Instance.LoadScene(SceneNames.AR_WRECKING_BALL_SCENE);
-    }
+    }*/
 
     public void OnClawMachineClicked()
     {
