@@ -13,7 +13,7 @@ public class ModelSelector : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        selectedModelText.text = "Selected: Model " + selectedModel;
+        selectedModelText.text = "Selected: Model " + (selectedModel+1);
         models[selectedModel].SetActive(true);
     }
 
@@ -27,7 +27,7 @@ public class ModelSelector : MonoBehaviour
     {
         models[selectedModel].SetActive(false);
         this.selectedModel = index;
-        selectedModelText.text = "Selected: Model " + selectedModel;
+        selectedModelText.text = "Selected: Model " + (selectedModel+1);
         models[selectedModel].SetActive(true);
         EventBroadcaster.Instance.PostEvent(EventNames.ARMultipleTextbox.ON_CLOSE_TEXTBOX);
     }

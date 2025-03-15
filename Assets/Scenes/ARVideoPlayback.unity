@@ -1419,7 +1419,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d9f7a5c863cdd44094feb3fea8611ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayMsg: Scan the 'Stones' image target to see video playback.
+  displayMsg: Scan the 'Stones' image target to start then the 'Road' image target
+    to see video playback.
 --- !u!4 &1818657214
 Transform:
   m_ObjectHideFlags: 0

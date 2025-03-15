@@ -37,7 +37,7 @@ public class ObjectPlaceScreen : MonoBehaviour {
 	public void OnSelectedButton(int buildingID) {
 		Debug.Log(selectedText.text);
         Debug.Log(selectedText.fontStyle);
-        this.selectedText.text = "Selected: Building " + buildingID; // needs replacing, not working
+        this.selectedText.text = "Selected: Building " + (buildingID+1); // needs replacing, not working
         ObjectPlacerManager.Instance.SetSelected(buildingID);
 
 		Debug.Log("Selected: Building " + buildingID);

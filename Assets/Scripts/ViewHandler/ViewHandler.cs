@@ -49,6 +49,7 @@ public class ViewHandler : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(this.isUIActionsPermitted && Input.GetKeyDown(KeyCode.Escape)) {
+			Debug.Log("Going back");
 			this.OnBack ();
 		}
 	}
@@ -130,6 +131,8 @@ public class ViewHandler : MonoBehaviour {
 		View activeView = this.GetActiveView();
 
 		if(activeView == null || activeView.IsCancelable() == false) {
+			if(activeView==null) { Debug.Log("Active view problem "); }
+			if(activeView.IsCancelable() == false ) { Debug.Log("can't cancel"); }
 			return;
 		}
 
